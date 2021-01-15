@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>.Paly</title>
+  
+  <subtitle>paly</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://MrW1108.github.io/"/>
+  <updated>2021-01-09T06:04:39.078Z</updated>
+  <id>https://MrW1108.github.io/</id>
+  
+  <author>
+    <name>.Paly</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm,看这篇就够了</title>
+    <link href="https://MrW1108.github.io/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/"/>
+    <id>https://MrW1108.github.io/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/</id>
+    <published>2021-01-08T13:12:27.000Z</published>
+    <updated>2021-01-09T06:04:39.078Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近在研究  &lt;code&gt;npm&lt;/code&gt; 组件发布，碰到一些相关问题，算是整理一下。&lt;/p&gt;
+&lt;h3 id=&quot;涉及内容&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="npm" scheme="https://MrW1108.github.io/categories/npm/"/>
+    
+      <category term="前端" scheme="https://MrW1108.github.io/categories/npm/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="npm" scheme="https://MrW1108.github.io/tags/npm/"/>
+    
+      <category term="前端" scheme="https://MrW1108.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo,搭建个人博客</title>
+    <link href="https://MrW1108.github.io/2021/01/08/hexo-da-jian-ge-ren-bo-ke/"/>
+    <id>https://MrW1108.github.io/2021/01/08/hexo-da-jian-ge-ren-bo-ke/</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-09T06:04:32.218Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;2020 - 2 月底鬼使神差的给我的域名 &lt;code&gt;mflyyou.cn&lt;/code&gt; 续费三年，2024 - 4
+        
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="https://MrW1108.github.io/categories/hexo/"/>
+    
+      <category term="cdn" scheme="https://MrW1108.github.io/categories/hexo/cdn/"/>
+    
+      <category term="oss" scheme="https://MrW1108.github.io/categories/hexo/cdn/oss/"/>
+    
+      <category term="nginx" scheme="https://MrW1108.github.io/categories/hexo/cdn/oss/nginx/"/>
+    
+      <category term="shell" scheme="https://MrW1108.github.io/categories/hexo/cdn/oss/nginx/shell/"/>
+    
+    
+      <category term="hexo" scheme="https://MrW1108.github.io/tags/hexo/"/>
+    
+      <category term="nginx" scheme="https://MrW1108.github.io/tags/nginx/"/>
+    
+      <category term="cdn" scheme="https://MrW1108.github.io/tags/cdn/"/>
+    
+      <category term="oss" scheme="https://MrW1108.github.io/tags/oss/"/>
+    
+      <category term="shell" scheme="https://MrW1108.github.io/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>毛概知识概述</title>
+    <link href="https://MrW1108.github.io/2021/01/08/mao-gai-zhi-shi-gai-shu/"/>
+    <id>https://MrW1108.github.io/2021/01/08/mao-gai-zhi-shi-gai-shu/</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-08T11:20:38.671Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;毛概知识概述&quot;&gt;&lt;a href=&quot;#毛概知识概述&quot; class=&quot;headerlink&quot; title=&quot;毛概知识概述&quot;&gt;&lt;/a&gt;毛概知识概述&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="毛概" scheme="https://MrW1108.github.io/categories/%E6%AF%9B%E6%A6%82/"/>
+    
+    
+      <category term="毛概" scheme="https://MrW1108.github.io/tags/%E6%AF%9B%E6%A6%82/"/>
+    
+      <category term="Markdown" scheme="https://MrW1108.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+</feed>
