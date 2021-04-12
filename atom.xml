@@ -5,9 +5,9 @@
   <subtitle>paly</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://MrW1108.github.io/"/>
+  <link href="http://paly.bwmgd.club/"/>
   <updated>2021-01-09T06:04:39.078Z</updated>
-  <id>https://MrW1108.github.io/</id>
+  <id>http://paly.bwmgd.club/</id>
   
   <author>
     <name>.Paly</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>npm,看这篇就够了</title>
-    <link href="https://MrW1108.github.io/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/"/>
-    <id>https://MrW1108.github.io/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/</id>
+    <link href="http://paly.bwmgd.club/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/"/>
+    <id>http://paly.bwmgd.club/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/</id>
     <published>2021-01-08T13:12:27.000Z</published>
     <updated>2021-01-09T06:04:39.078Z</updated>
     
@@ -36,55 +36,21 @@
     
     </summary>
     
-      <category term="npm" scheme="https://MrW1108.github.io/categories/npm/"/>
+      <category term="npm" scheme="http://paly.bwmgd.club/categories/npm/"/>
     
-      <category term="前端" scheme="https://MrW1108.github.io/categories/npm/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="npm" scheme="https://MrW1108.github.io/tags/npm/"/>
-    
-      <category term="前端" scheme="https://MrW1108.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo,搭建个人博客</title>
-    <link href="https://MrW1108.github.io/2021/01/08/hexo-da-jian-ge-ren-bo-ke/"/>
-    <id>https://MrW1108.github.io/2021/01/08/hexo-da-jian-ge-ren-bo-ke/</id>
-    <published>2021-01-07T16:00:00.000Z</published>
-    <updated>2021-04-12T06:58:30.281Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt; 使用hexo和腾讯云搭建的个人博客&lt;br&gt; hexo选用了开源主题
-        
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="https://MrW1108.github.io/categories/hexo/"/>
+      <category term="前端" scheme="http://paly.bwmgd.club/categories/npm/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="hexo" scheme="https://MrW1108.github.io/tags/hexo/"/>
+      <category term="npm" scheme="http://paly.bwmgd.club/tags/npm/"/>
     
-      <category term="cdn" scheme="https://MrW1108.github.io/tags/cdn/"/>
-    
-      <category term="oss" scheme="https://MrW1108.github.io/tags/oss/"/>
-    
-      <category term="git" scheme="https://MrW1108.github.io/tags/git/"/>
-    
-      <category term="shell" scheme="https://MrW1108.github.io/tags/shell/"/>
+      <category term="前端" scheme="http://paly.bwmgd.club/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>毛概知识概述</title>
-    <link href="https://MrW1108.github.io/2021/01/08/mao-gai-zhi-shi-gai-shu/"/>
-    <id>https://MrW1108.github.io/2021/01/08/mao-gai-zhi-shi-gai-shu/</id>
+    <link href="http://paly.bwmgd.club/2021/01/08/mao-gai-zhi-shi-gai-shu/"/>
+    <id>http://paly.bwmgd.club/2021/01/08/mao-gai-zhi-shi-gai-shu/</id>
     <published>2021-01-07T16:00:00.000Z</published>
     <updated>2021-01-08T11:20:38.671Z</updated>
     
@@ -100,12 +66,46 @@
     
     </summary>
     
-      <category term="毛概" scheme="https://MrW1108.github.io/categories/%E6%AF%9B%E6%A6%82/"/>
+      <category term="毛概" scheme="http://paly.bwmgd.club/categories/%E6%AF%9B%E6%A6%82/"/>
     
     
-      <category term="毛概" scheme="https://MrW1108.github.io/tags/%E6%AF%9B%E6%A6%82/"/>
+      <category term="毛概" scheme="http://paly.bwmgd.club/tags/%E6%AF%9B%E6%A6%82/"/>
     
-      <category term="Markdown" scheme="https://MrW1108.github.io/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://paly.bwmgd.club/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo,搭建个人博客</title>
+    <link href="http://paly.bwmgd.club/2021/01/08/hexo-da-jian-ge-ren-bo-ke/"/>
+    <id>http://paly.bwmgd.club/2021/01/08/hexo-da-jian-ge-ren-bo-ke/</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-04-12T06:58:30.281Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt; 使用hexo和腾讯云搭建的个人博客&lt;br&gt; hexo选用了开源主题
+        
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://paly.bwmgd.club/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://paly.bwmgd.club/tags/hexo/"/>
+    
+      <category term="cdn" scheme="http://paly.bwmgd.club/tags/cdn/"/>
+    
+      <category term="oss" scheme="http://paly.bwmgd.club/tags/oss/"/>
+    
+      <category term="git" scheme="http://paly.bwmgd.club/tags/git/"/>
+    
+      <category term="shell" scheme="http://paly.bwmgd.club/tags/shell/"/>
     
   </entry>
   
