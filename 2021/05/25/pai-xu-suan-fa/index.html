@@ -552,7 +552,7 @@ function quickSort(arr, l ,r){
   }
   return arr;
 }</code></pre><p>若以其他元素为基准，只需要最开始将基础元素与最左边元素交换即可  </p>
-<h2 id="合并排序（常见）"><a href="#合并排序（常见）" class="headerlink" title="合并排序（常见）"></a>合并排序（常见）</h2><p>思路：也采用了分而治之的递归方法来排序数组。利用递归将数组一分为二，直到数组里面只包含一个元素为止。单个元素的数组是自然序的，然后合并生成一个最终的排序数组。<br>合并排序是一种高效的排序方式<strong>时间复杂度：O(nlogn)</strong><br><img src="https://images2015.cnblogs.com/blog/1024555/201612/1024555-20161218163120151-452283750.png" alt="image"><br><strong>具体的实现过程如下：</strong><br><img src="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" alt="image"></p>
+<h2 id="合并排序（常见）"><a href="#合并排序（常见）" class="headerlink" title="合并排序（常见）"></a>合并排序（常见）</h2><p>思路：也采用了分而治之的递归方法来排序数组。利用递归将数组一分为二，直到数组里面只包含一个元素为止。单个元素的数组是自然序的，然后合并生成一个最终的排序数组。<br>合并排序是一种高效的排序方式<strong>时间复杂度：O(nlogn)</strong><br><img src="https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E5%90%88%E5%B9%B6%E6%8E%92%E5%BA%8F.png" alt="image"><br><strong>具体的实现过程如下：</strong><br><img src="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" alt="image"></p>
 <pre><code>//合并排序（自上而下的递归）
 function mergeSort(array) {
   if(array.length&lt;2){
