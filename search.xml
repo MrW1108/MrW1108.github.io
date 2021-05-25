@@ -4,13 +4,31 @@
   
     
     <entry>
-      <title>测试</title>
-      <link href="2021/05/25/ce-shi/"/>
-      <url>2021/05/25/ce-shi/</url>
+      <title>排序算法</title>
+      <link href="2021/05/25/pai-xu-suan-fa/"/>
+      <url>2021/05/25/pai-xu-suan-fa/</url>
       
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p><strong>目录</strong></p><ol><li><a href="#冒泡排序">冒泡排序</a></li><li><a href="#选择排序">选择排序</a></li><li><a href="#插入排序">插入排序</a></li><li><a href="#快速排序">快速排序</a></li><li><a href="#合并排序">合并排序</a></li><li><a href="#分治法">分治法</a></li></ol><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>思路： 从数组开头开始，将未被排序的数组元素排序，然后迭代数组。该方法通过比较相邻元素然后置换元素完成排序。就是遍历数组，直到整个数组没有可交换元素为止。<br><strong>时间复杂度O(n^2)，空间复杂度O(1)</strong> </p><pre><code>//冒泡排序function bubbleSort(array) {  var len = arr.length;  for (var i = 0; i &lt; len-1; i++) {    for (var j = 0; j &lt; len - 1 - i; j++) {        // 相邻元素两两对比，元素交换，大的元素交换到后面        if (arr[j] &gt; arr[j + 1]) {            var temp = arr[j];            arr[j] = arr[j+1];            arr[j+1] = temp;        }    }  }}</code></pre><h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>思路：通过选择列表中最小值来与列表中第一个值进行对比交换，然后从第二个位置逐一对比，选择剩下列表中最小值来与第二个值交换位置。然后循环遍历列表并交换元素，直到最后一个元素为止。<br>所有情况均为<strong>时间复杂度O(n^2),空间复杂度O(1)</strong></p><pre><code>//选择排序function selectionSort(array){  const len = array.length;  var minIndex,temp;  for(let i=1;i&lt;len-1;i++){    minIndex = i;    for(let j=i;j&lt;len;j++){  //找到最小值下标      if(array[j]&lt;array[minIndex]){        minIndex = j;      }    }    temp = array[i];    array[i] = array[minIndex];    array[minIndex] = temp;  }}</code></pre><h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>思路：通过在列表的开头建一个排序的数组来实现整个排序，它以第一个元素开始排序数组，然后检查对比下一个元素，并将其向后交换到排序的数中，直到它处在排序的位置。循环迭代整个列表，将新产生的元素交换到排序部分，直到整个列表处于排序状态。该算法在平均和最坏的情况下<strong>时间复杂度O(n^2)</strong></p><pre><code>//插入排序function insertionSort(array){  let len = array.length;  let preIndex, current;  for (let i = 1; i &lt; len; i++) {    preIndex = i - 1;    current = array[i];   //第一轮从array[1]开始向前比较    while (preIndex &gt;= 0 &amp;&amp; current &lt; array[preIndex]) {      array[preIndex + 1] = array[preIndex];  //向后交换元素      preIndex--;    }    array[preIndex + 1] = current; //将要排序的元素交换到正确排序位置  }}</code></pre><h2 id="快速排序（常见）"><a href="#快速排序（常见）" class="headerlink" title="快速排序（常见）"></a>快速排序（常见）</h2><p>快速排序采用<a href="#分治法"><strong>分治法</strong></a><br>思路：将原始数组选择一个基准值(下面的算法以中间数为基准)，将数组划分为两个子数组，其值大于或者小于基准值。然后两个子数组分别递归调用此快排算法排序，直到为空数组和单个元素数组的情况，得到结果。<br><strong>平均时间复杂度：O(nlogn)</strong><br><strong>空间复杂度O(logn)</strong>(基准元素储存空间)</p><pre><code>//快速排序（以区间第一个数为基准）  例如：[2,6,3,8,1,9]  function quickSort(arr, l ,r){  if(l&lt;r){      var i=l, j=r, x=arr[l];  //以区间第一个数为基准(挖第一个坑）  x=a[0]=2 [_,6,3,8,1,9]    while(i&lt;j){        while(i&lt;j &amp;&amp; arr[j]&gt;=x){  //从右边向左找第一个小于基准的数   arr[4]=1 （挖新坑） [_,6,3,8,_,9]              j--;        }        arr[i] = arr[j];  //填上一个（第一个）坑  [1,6,3,8,_,9]          while(i&lt;j &amp;&amp; arr[i]&lt;x){  //从左向右找第一个大于或者等于基准的数 （挖新坑）a[1]=6  [1,_,3,8,_,9]            i++;        }        arr[j] = arr[i];  //填上一个坑 [1,_,3,8,6,9]      }    arr[i] = x;  //退出时，i等于j。将x填到最后这个坑中 [1,2,3,8,6,9]      quickSort(arr, l, i);  //递归左数组    quickSort(arr, i+1, r);  //递归右数组  }  return arr;}</code></pre><p>若以其他元素为基准，只需要最开始将基础元素与最左边元素交换即可  </p><h2 id="合并排序（常见）"><a href="#合并排序（常见）" class="headerlink" title="合并排序（常见）"></a>合并排序（常见）</h2><p>思路：也采用了分而治之的递归方法来排序数组。利用递归将数组一分为二，直到数组里面只包含一个元素为止。单个元素的数组是自然序的，然后合并生成一个最终的排序数组。<br>合并排序是一种高效的排序方式<strong>时间复杂度：O(nlogn)</strong><br><img src="https://images2015.cnblogs.com/blog/1024555/201612/1024555-20161218163120151-452283750.png" alt="image"><br><strong>具体的实现过程如下：</strong><br><img src="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" alt="image"></p><pre><code>//合并排序（自上而下的递归）function mergeSort(array) {  if(array.length&lt;2){    return array;  }  var mid = Math.floor(array.length/2);  var left = array.slice(0,mid);     // slice(start,end)返回数组指定元素的新的数组  var right = array.slice(mid);  return merge(mergeSort(left),mergeSort(right));}function merge(left, right){   //合并  var result = [];  while(left.length &amp;&amp; right.length){    if(left[0]&lt;=right[0]){      result.push(left.shift());   //shift():删除数组第一个元素，并返回删除元素的值    }else{      result.push(right.shift());    }  }  while(left.length){    result.push(left.shift());  }  while(right.length){    result.push(right.shift());  }  return result;}</code></pre><h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><p><strong>分治法设计思想：</strong> 讲一个规模为n的问题分解为k个规模较小的相同子问题，递归得到子问题的解，合并得到原问题的解。<br><strong>用分治法一般具有以下特征</strong>  </p><ul><li>该问题的规模缩小到一定的程度就可以容易地解决；</li><li>该问题可以分解为若干个规模较小的相同问题，即该问题具有<strong>最优子结构性质</strong></li><li>利用该问题分解出的子问题的解可以合并为该问题的解；</li><li>该问题所分解出的各个子问题是相互独立的，即子问题之间不包含公共的子问题。</li></ul><p>如果各子问题不互相独立，会多做许多不必要的工作，产生重复解，所以这时一般用<strong>动态规划</strong>较好。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 快排 </tag>
+            
+            <tag> 动态规划 </tag>
+            
+        </tags>
       
     </entry>
     

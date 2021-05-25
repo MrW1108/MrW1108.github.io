@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo,搭建个人博客, .Paly">
+    <meta name="keywords" content="排序算法, .Paly">
     <meta name="description" content="java | 前端 | 后端 | javascript | vue | spring | spring cloud | shell | redis | mysql">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo,搭建个人博客 | .Paly</title>
+    <title>排序算法 | .Paly</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -289,12 +289,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E7%AE%97%E6%B3%95.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo,搭建个人博客</h1>
+                    <h1 class="description center-align post-title">排序算法</h1>
                 </div>
             </div>
         </div>
@@ -410,24 +410,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/算法/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="/tags/cdn/">
-                                <span class="chip bg-color">cdn</span>
+                            <a href="/tags/排序/">
+                                <span class="chip bg-color">排序</span>
                             </a>
                         
-                            <a href="/tags/oss/">
-                                <span class="chip bg-color">oss</span>
+                            <a href="/tags/快排/">
+                                <span class="chip bg-color">快排</span>
                             </a>
                         
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
-                            </a>
-                        
-                            <a href="/tags/shell/">
-                                <span class="chip bg-color">shell</span>
+                            <a href="/tags/动态规划/">
+                                <span class="chip bg-color">动态规划</span>
                             </a>
                         
                     </div>
@@ -438,8 +434,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo/" class="post-category">
-                                hexo
+                            <a href="/categories/算法/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -451,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-08
+                    2021-05-25
                 </div>
                 
 
@@ -460,14 +456,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    894
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -482,137 +478,116 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 使用hexo和腾讯云搭建的个人博客<br> hexo选用了开源主题 <code>hexo-theme-matery</code>,<br> 做了些许修改。</p>
-<p> 博客的具体效果请观摩 <a href="http://paly.bwmgd.club">.paly的博客</a></p>
-<h3 id="本文概要"><a href="#本文概要" class="headerlink" title="本文概要"></a>本文概要</h3><ul>
-<li>hexo 使用，及怎么去改主题的模板</li>
-<li>腾讯云服务器，搭建 nginx/Apache</li>
-<li>git配置，一键上传资源到网站根目录<!--- 百度、谷歌 seo 优化，让你的网站可以被搜索到--> 
-<!--- 阿里 oss 作为图片服务器-->
-<!--- CDN 加速提高首屏渲染-->
-<!--- 目录下，将所需静态资源上传到 oss-->
+                <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p><strong>目录</strong></p>
+<ol>
+<li><a href="#冒泡排序">冒泡排序</a></li>
+<li><a href="#选择排序">选择排序</a></li>
+<li><a href="#插入排序">插入排序</a></li>
+<li><a href="#快速排序">快速排序</a></li>
+<li><a href="#合并排序">合并排序</a></li>
+<li><a href="#分治法">分治法</a></li>
+</ol>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>思路： 从数组开头开始，将未被排序的数组元素排序，然后迭代数组。该方法通过比较相邻元素然后置换元素完成排序。就是遍历数组，直到整个数组没有可交换元素为止。<br><strong>时间复杂度O(n^2)，空间复杂度O(1)</strong> </p>
+<pre><code>//冒泡排序
+function bubbleSort(array) {
+  var len = arr.length;
+  for (var i = 0; i &lt; len-1; i++) {
+    for (var j = 0; j &lt; len - 1 - i; j++) {
+        // 相邻元素两两对比，元素交换，大的元素交换到后面
+        if (arr[j] &gt; arr[j + 1]) {
+            var temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+        }
+    }
+  }
+}</code></pre><h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>思路：通过选择列表中最小值来与列表中第一个值进行对比交换，然后从第二个位置逐一对比，选择剩下列表中最小值来与第二个值交换位置。然后循环遍历列表并交换元素，直到最后一个元素为止。<br>所有情况均为<strong>时间复杂度O(n^2),空间复杂度O(1)</strong></p>
+<pre><code>//选择排序
+function selectionSort(array){
+  const len = array.length;
+  var minIndex,temp;
+  for(let i=1;i&lt;len-1;i++){
+    minIndex = i;
+    for(let j=i;j&lt;len;j++){  //找到最小值下标
+      if(array[j]&lt;array[minIndex]){
+        minIndex = j;
+      }
+    }
+    temp = array[i];
+    array[i] = array[minIndex];
+    array[minIndex] = temp;
+  }
+}</code></pre><h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>思路：通过在列表的开头建一个排序的数组来实现整个排序，它以第一个元素开始排序数组，然后检查对比下一个元素，并将其向后交换到排序的数中，直到它处在排序的位置。循环迭代整个列表，将新产生的元素交换到排序部分，直到整个列表处于排序状态。该算法在平均和最坏的情况下<strong>时间复杂度O(n^2)</strong></p>
+<pre><code>//插入排序
+function insertionSort(array){
+  let len = array.length;
+  let preIndex, current;
+  for (let i = 1; i &lt; len; i++) {
+    preIndex = i - 1;
+    current = array[i];   //第一轮从array[1]开始向前比较
+    while (preIndex &gt;= 0 &amp;&amp; current &lt; array[preIndex]) {
+      array[preIndex + 1] = array[preIndex];  //向后交换元素
+      preIndex--;
+    }
+    array[preIndex + 1] = current; //将要排序的元素交换到正确排序位置
+  }
+}</code></pre><h2 id="快速排序（常见）"><a href="#快速排序（常见）" class="headerlink" title="快速排序（常见）"></a>快速排序（常见）</h2><p>快速排序采用<a href="#分治法"><strong>分治法</strong></a><br>思路：将原始数组选择一个基准值(下面的算法以中间数为基准)，将数组划分为两个子数组，其值大于或者小于基准值。然后两个子数组分别递归调用此快排算法排序，直到为空数组和单个元素数组的情况，得到结果。<br><strong>平均时间复杂度：O(nlogn)</strong><br><strong>空间复杂度O(logn)</strong>(基准元素储存空间)</p>
+<pre><code>//快速排序（以区间第一个数为基准）  例如：[2,6,3,8,1,9]  
+function quickSort(arr, l ,r){
+  if(l&lt;r){  
+    var i=l, j=r, x=arr[l];  //以区间第一个数为基准(挖第一个坑）  x=a[0]=2 [_,6,3,8,1,9]
+    while(i&lt;j){
+        while(i&lt;j &amp;&amp; arr[j]&gt;=x){  //从右边向左找第一个小于基准的数   arr[4]=1 （挖新坑） [_,6,3,8,_,9]  
+            j--;
+        }
+        arr[i] = arr[j];  //填上一个（第一个）坑  [1,6,3,8,_,9]  
+        while(i&lt;j &amp;&amp; arr[i]&lt;x){  //从左向右找第一个大于或者等于基准的数 （挖新坑）a[1]=6  [1,_,3,8,_,9]
+            i++;
+        }
+        arr[j] = arr[i];  //填上一个坑 [1,_,3,8,6,9]  
+    }
+    arr[i] = x;  //退出时，i等于j。将x填到最后这个坑中 [1,2,3,8,6,9]  
+    quickSort(arr, l, i);  //递归左数组
+    quickSort(arr, i+1, r);  //递归右数组
+  }
+  return arr;
+}</code></pre><p>若以其他元素为基准，只需要最开始将基础元素与最左边元素交换即可  </p>
+<h2 id="合并排序（常见）"><a href="#合并排序（常见）" class="headerlink" title="合并排序（常见）"></a>合并排序（常见）</h2><p>思路：也采用了分而治之的递归方法来排序数组。利用递归将数组一分为二，直到数组里面只包含一个元素为止。单个元素的数组是自然序的，然后合并生成一个最终的排序数组。<br>合并排序是一种高效的排序方式<strong>时间复杂度：O(nlogn)</strong><br><img src="https://images2015.cnblogs.com/blog/1024555/201612/1024555-20161218163120151-452283750.png" alt="image"><br><strong>具体的实现过程如下：</strong><br><img src="https://www.runoob.com/wp-content/uploads/2019/03/mergeSort.gif" alt="image"></p>
+<pre><code>//合并排序（自上而下的递归）
+function mergeSort(array) {
+  if(array.length&lt;2){
+    return array;
+  }
+  var mid = Math.floor(array.length/2);
+  var left = array.slice(0,mid);     // slice(start,end)返回数组指定元素的新的数组
+  var right = array.slice(mid);
+  return merge(mergeSort(left),mergeSort(right));
+}
 
-</li>
+function merge(left, right){   //合并
+  var result = [];
+  while(left.length &amp;&amp; right.length){
+    if(left[0]&lt;=right[0]){
+      result.push(left.shift());   //shift():删除数组第一个元素，并返回删除元素的值
+    }else{
+      result.push(right.shift());
+    }
+  }
+  while(left.length){
+    result.push(left.shift());
+  }
+  while(right.length){
+    result.push(right.shift());
+  }
+  return result;
+}</code></pre><h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><p><strong>分治法设计思想：</strong> 讲一个规模为n的问题分解为k个规模较小的相同子问题，递归得到子问题的解，合并得到原问题的解。<br><strong>用分治法一般具有以下特征</strong>  </p>
+<ul>
+<li>该问题的规模缩小到一定的程度就可以容易地解决；</li>
+<li>该问题可以分解为若干个规模较小的相同问题，即该问题具有<strong>最优子结构性质</strong></li>
+<li>利用该问题分解出的子问题的解可以合并为该问题的解；</li>
+<li>该问题所分解出的各个子问题是相互独立的，即子问题之间不包含公共的子问题。</li>
 </ul>
-<h2 id="hexo-使用"><a href="#hexo-使用" class="headerlink" title="hexo 使用"></a>hexo 使用</h2><pre><code># 清除构建生成的 public 目录
-hexo clean
-# 生成当前目录资源
-hexo g 
-# 部署到远程
-hexo d
-# 本地预览
-hexo s</code></pre><h3 id="文章编写"><a href="#文章编写" class="headerlink" title="文章编写"></a>文章编写</h3><pre class="line-numbers language-bash"><code class="language-bash">hexo new post <span class="token operator">&lt;</span>title<span class="token operator">></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre><code>或者将md文件放进/source/_posts文件夹下</code></pre><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
-title: typora-vue-theme主题介绍
-date: 2021-01-08 09:25:00
-author: 赵奇
-img: /source/images/xxx.jpg
-top: true
-cover: true
-coverImg: /images/1.jpg
-password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
-toc: false
-mathjax: false
-summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
-categories: Markdown
-tags:
-  <span class="token list punctuation">-</span> Typora
-  <span class="token list punctuation">-</span> Markdown  
-
-<span class="token hr punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>文档 md 文件最前面的这些内容就会被利用生成 <code>标签</code> <code>分类</code> <code>归档</code> 内容。<br><code>root/_config.yml</code> 为 hexo 的配置文件。<br><code>root/themes/_config.yml</code> 为主题配置文件。</p>
-<table>
-<thead>
-<tr>
-<th>配置选项</th>
-<th>默认值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>title</td>
-<td><code>Markdown</code> 的文件标题</td>
-<td>文章标题，强烈建议填写此选项</td>
-</tr>
-<tr>
-<td>date</td>
-<td>文件创建时的日期时间</td>
-<td>发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
-</tr>
-<tr>
-<td>author</td>
-<td>根 <code>_config.yml</code> 中的 <code>author</code></td>
-<td>文章作者</td>
-</tr>
-<tr>
-<td>img</td>
-<td><code>featureImages</code> 中的某个值</td>
-<td>文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <code>http://xxx.com/xxx.jpg</code></td>
-</tr>
-<tr>
-<td>top</td>
-<td><code>true</code></td>
-<td>推荐文章（文章是否置顶），如果 <code>top</code> 值为 <code>true</code>，则会作为首页推荐文章</td>
-</tr>
-<tr>
-<td>cover</td>
-<td><code>false</code></td>
-<td><code>v1.0.2</code>版本新增，表示该文章是否需要加入到首页轮播封面中</td>
-</tr>
-<tr>
-<td>coverImg</td>
-<td>无</td>
-<td><code>v1.0.2</code>版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
-</tr>
-<tr>
-<td>password</td>
-<td>无</td>
-<td>文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 <code>password</code> 的值，该值必须是用 <code>SHA256</code> 加密后的密码，防止被他人识破。前提是在主题的 <code>config.yml</code> 中激活了 <code>verifyPassword</code> 选项</td>
-</tr>
-<tr>
-<td>toc</td>
-<td><code>true</code></td>
-<td>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 <code>config.yml</code> 中激活了 <code>toc</code> 选项</td>
-</tr>
-<tr>
-<td>mathjax</td>
-<td><code>false</code></td>
-<td>是否开启数学公式支持 ，本文章是否开启 <code>mathjax</code>，且需要在主题的 <code>_config.yml</code> 文件中也需要开启才行</td>
-</tr>
-<tr>
-<td>summary</td>
-<td>无</td>
-<td>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td>
-</tr>
-<tr>
-<td>categories</td>
-<td>无</td>
-<td>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>无</td>
-<td>文章标签，一篇文章可以多个标签</td>
-</tr>
-<tr>
-<td>keywords</td>
-<td>文章标题</td>
-<td>文章关键字，SEO 时需要</td>
-</tr>
-<tr>
-<td>reprintPolicy</td>
-<td>cc_by</td>
-<td>文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td>
-</tr>
-</tbody></table>
-<h2 id="搭建教程"><a href="#搭建教程" class="headerlink" title="搭建教程"></a>搭建教程</h2><p>具体搭建请参考此教程 <a href="http://mflyyou.cn/2020/03/06/hexo-da-jian-ge-ren-bo-ke/" target="_blank" rel="noopener">hexo,搭建个人博客</a></p>
-<!--## 部署-->
-
-<!--执行脚本 deploy.sh 会将构建好的 public 下的资源复制到远程服务器上-->
-
-
-<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>感觉开源的 hexo 主题 <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">hexo-theme-matery</a></p>
-<p>感谢<a href="https://github.com/godweiyang/hexo-matery-modified" target="_blank" rel="noopener">hexo-matery-modified</a></p>
+<p>如果各子问题不互相独立，会多做许多不必要的工作，产生重复解，所以这时一般用<strong>动态规划</strong>较好。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -657,7 +632,7 @@ tags:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://paly.bwmgd.club/2021/01/08/hexo-da-jian-ge-ren-bo-ke/">http://paly.bwmgd.club/2021/01/08/hexo-da-jian-ge-ren-bo-ke/</a>
+                    <a href="http://paly.bwmgd.club/2021/05/25/pai-xu-suan-fa/">http://paly.bwmgd.club/2021/05/25/pai-xu-suan-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -695,24 +670,20 @@ tags:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/算法/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
-                                <a href="/tags/cdn/">
-                                    <span class="chip bg-color">cdn</span>
+                                <a href="/tags/排序/">
+                                    <span class="chip bg-color">排序</span>
                                 </a>
                             
-                                <a href="/tags/oss/">
-                                    <span class="chip bg-color">oss</span>
+                                <a href="/tags/快排/">
+                                    <span class="chip bg-color">快排</span>
                                 </a>
                             
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
-                                </a>
-                            
-                                <a href="/tags/shell/">
-                                    <span class="chip bg-color">shell</span>
+                                <a href="/tags/动态规划/">
+                                    <span class="chip bg-color">动态规划</span>
                                 </a>
                             
                         </div>
@@ -755,9 +726,71 @@ tags:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/05/25/pai-xu-suan-fa/">
+                    <div class="card-image">
+                        
+                        <img src="https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E7%AE%97%E6%B3%95.jpg" class="responsive-img" alt="排序算法">
+                        
+                        <span class="card-title">排序算法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            冒泡、选择、插入、快排、合并、分治、动态规划
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/算法/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/算法/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/排序/">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
+                    <a href="/tags/快排/">
+                        <span class="chip bg-color">快排</span>
+                    </a>
+                    
+                    <a href="/tags/动态规划/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/">
                     <div class="card-image">
@@ -775,9 +808,9 @@ tags:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -803,58 +836,6 @@ tags:
                     
                     <a href="/tags/前端/">
                         <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/01/08/mao-gai-zhi-shi-gai-shu/">
-                    <div class="card-image">
-                        
-                        <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4240126495,3134743824&fm=26&gp=0.jpg" class="responsive-img" alt="毛概知识概述">
-                        
-                        <span class="card-title">毛概知识概述</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            毛概各章节知识点、思考题总结，快看过来
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-08
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/毛概/" class="post-category">
-                                    毛概
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/毛概/">
-                        <span class="chip bg-color">毛概</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
                     </a>
                     
                 </div>
