@@ -448,7 +448,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    612
+                    680
                 </div>
                 
 
@@ -478,10 +478,11 @@
 <li>原型上的所有属性在实例间共享</li>
 <li>实例上添加同名属性会遮蔽原型上的属性</li>
 </ul>
-<p><img src="https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-%E5%8E%9F%E5%9E%8B-%E5%AE%9E%E4%BE%8B%E5%85%B3%E7%B3%BB%E5%9B%BE.png?x-oss-process=style/format" alt="构造函数-原型-实例关系图"></p>
+<p><img src="https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-%E5%8E%9F%E5%9E%8B-%E5%AE%9E%E4%BE%8B%E5%85%B3%E7%B3%BB%E5%9B%BE.png?x-oss-process=style/format-size" alt="构造函数-原型-实例关系图"></p>
 <p>如图，展示了Person构造函数、Person的原型对象和Person现有的两个实例之间的关系。<code>Person.prototype</code>指向<code>原型对象</code>，<code>Person.prototype.constructor</code>指回<code>构造函数</code>。<br>原型对象中包含<code>constructor</code>属性和其他后来添加的属性。Person的两个实例person1和person2都只有一个内部属性指回<code>Person.prototype</code>，而且两者与构造函数没有直接联系。 </p>
 <p><strong>实例的属性和方法</strong><br>虽然两个实例都没有属性和方法，但是它们<code>person1.sayName()</code>可以正常调用，这是由于对象属性查找机制，通过对象访问属性时，会按照这个属性的名称开始搜索，先搜索对象实例本身，如果有则返回对应的值，如果没有找到这个属性，则搜索会沿着<code>指针</code>进入原型对象，在原型对象上找到属性后，再返回对应的值。</p>
 <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>基本构想是：<code>实例</code> 指向 <code>原型</code>，而 <code>原型</code> 是另一个 <code>原型</code> 的 <code>实例</code> ，意味着这个<code>原型</code>的本身有一个内部指针指向另一个<code>原型</code>（继承的原型），相应的另一个<code>原型</code>也有一个指针指向另一个 <code>构造函数</code>（它自己的），这样<code>实例</code>和<code>原型</code>之间就构造了一条 <strong>原型链</strong>。<br><code>原型链</code> 扩展了原型搜索机制，读取实例上的属性时，先在实例上搜索，再搜索它继承的原型，再通过原型链 <code>继承</code> 后，搜索就可以继承向上，顺着 <code>原型链</code> 向上搜索其他的原型。<br><img src="https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E5%8E%9F%E5%9E%8B%E9%93%BE.jpg?x-oss-process=style/format-size" alt="原型链"></p>
+<p>默认情况下，所有引用类型都继承<code>Object</code>,任何函数的默认原型都是一个<code>Object</code>的实例。<br>这意味着这个实例有一个内部指针指向这个<code>Object.prototype</code>，所以原型链的顶端还有<code>Object</code>, <code>Object.prototype</code> 是<code>null</code>。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -861,7 +862,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.4k</span>&nbsp;字
+                class="white-color">13.5k</span>&nbsp;字
             
             
             
