@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>原型 &amp; 原型链</title>
+      <link href="2021/05/27/yuan-xing-yuan-xing-lian/"/>
+      <url>2021/05/27/yuan-xing-yuan-xing-lian/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p>要先建立构造函数，构造函数的prototype属性会自动指向原型对象。<br>在创建实例后，可以修改prototype对象中的属性，但不可以重写整个原型（开始没有定义，再实例创建后给prototype添加属性</p><h2 id="构造函数、原型和实例的关系"><a href="#构造函数、原型和实例的关系" class="headerlink" title="构造函数、原型和实例的关系"></a>构造函数、原型和实例的关系</h2><ul><li>每个 <code>构造函数</code> 都有一个原型对象（原型prototype）</li><li><code>原型</code>有一个 <code>constructor</code> 属性指回构造函数</li><li><code>实例</code>有一个内部指针 <code>[[Prototype]]</code> 指向原型</li><li>原型上的所有属性在实例间共享</li><li>实例上添加同名属性会遮蔽原型上的属性</li></ul><p><img src="https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-%E5%8E%9F%E5%9E%8B-%E5%AE%9E%E4%BE%8B%E5%85%B3%E7%B3%BB%E5%9B%BE.png?x-oss-process=style/format" alt="构造函数-原型-实例关系图"></p><p>如图，展示了Person构造函数、Person的原型对象和Person现有的两个实例之间的关系。<code>Person.prototype</code>指向<code>原型对象</code>，<code>Person.prototype.constructor</code>指回<code>构造函数</code>。<br>原型对象中包含<code>constructor</code>属性和其他后来添加的属性。Person的两个实例person1和person2都只有一个内部属性指回<code>Person.prototype</code>，而且两者与构造函数没有直接联系。 </p><p><strong>实例的属性和方法</strong><br>虽然两个实例都没有属性和方法，但是它们<code>person1.sayName()</code>可以正常调用，这是由于对象属性查找机制，通过对象访问属性时，会按照这个属性的名称开始搜索，先搜索对象实例本身，如果有则返回对应的值，如果没有找到这个属性，则搜索会沿着<code>指针</code>进入原型对象，在原型对象上找到属性后，再返回对应的值。</p><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>基本构想是：<code>实例</code> 指向 <code>原型</code>，而 <code>原型</code> 是另一个 <code>原型</code> 的 <code>实例</code> ，意味着这个<code>原型</code>的本身有一个内部指针指向另一个<code>原型</code>（继承的原型），相应的另一个<code>原型</code>也有一个指针指向另一个 <code>构造函数</code>（它自己的），这样<code>实例</code>和<code>原型</code>之间就构造了一条 <strong>原型链</strong>。<br><code>原型链</code> 扩展了原型搜索机制，读取实例上的属性时，先在实例上搜索，再搜索它继承的原型，再通过原型链 <code>继承</code> 后，搜索就可以继承向上，顺着 <code>原型链</code> 向上搜索其他的原型。<br><img src="https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E5%8E%9F%E5%9E%8B%E9%93%BE.jpg?x-oss-process=style/format-size" alt="原型链"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 原型 </tag>
+            
+            <tag> 原型链 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浏览器缓存 &amp; 本地存储</title>
       <link href="2021/05/27/liu-lan-qi-huan-cun-ben-di-cun-chu/"/>
       <url>2021/05/27/liu-lan-qi-huan-cun-ben-di-cun-chu/</url>

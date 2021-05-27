@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://paly.bwmgd.club/"/>
-  <updated>2021-05-27T12:49:45.332Z</updated>
+  <updated>2021-05-27T13:11:16.222Z</updated>
   <id>http://paly.bwmgd.club/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>原型 &amp; 原型链</title>
+    <link href="http://paly.bwmgd.club/2021/05/27/yuan-xing-yuan-xing-lian/"/>
+    <id>http://paly.bwmgd.club/2021/05/27/yuan-xing-yuan-xing-lian/</id>
+    <published>2021-05-27T13:03:59.635Z</published>
+    <updated>2021-05-27T13:11:16.222Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;原型&quot;&gt;&lt;a href=&quot;#原型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://paly.bwmgd.club/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="原型" scheme="http://paly.bwmgd.club/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="原型链" scheme="http://paly.bwmgd.club/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>浏览器缓存 &amp; 本地存储</title>
