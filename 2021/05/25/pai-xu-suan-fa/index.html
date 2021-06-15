@@ -506,9 +506,9 @@ function bubbleSort(array) {
 function selectionSort(array){
   const len = array.length;
   var minIndex,temp;
-  for(let i=1;i&lt;len-1;i++){
+  for(let i=0;i&lt;len-1;i++){
     minIndex = i;
-    for(let j=i;j&lt;len;j++){  //找到最小值下标
+    for(let j=i+1;j&lt;len;j++){  //找到最小值下标
       if(array[j]&lt;array[minIndex]){
         minIndex = j;
       }
