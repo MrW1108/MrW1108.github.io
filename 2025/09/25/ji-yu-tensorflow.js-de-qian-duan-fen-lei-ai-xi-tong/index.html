@@ -1,0 +1,1368 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="基于 TensorFlow.js 的前端分类AI系统, 前端开发,JavaScript,Vue,React,性能优化,TensorFlow.js,软件工程,技术博客">
+    <meta name="description" content="专注前端开发的技术博客，分享JavaScript、Vue、React、性能优化、AI应用等前端技术经验与最佳实践">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>基于 TensorFlow.js 的前端分类AI系统 | .Paly</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title=".Paly" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">.Paly</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">.Paly</div>
+        <div class="logo-desc">
+            
+            专注前端开发的技术博客，分享JavaScript、Vue、React、性能优化、AI应用等前端技术经验与最佳实践
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/MrW1108" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/MrW1108" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">基于 TensorFlow.js 的前端分类AI系统</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/AI/">
+                                <span class="chip bg-color">AI</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-09-25
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="基于-TensorFlow-js-的前端分类-AI-系统"><a href="#基于-TensorFlow-js-的前端分类-AI-系统" class="headerlink" title="基于 TensorFlow.js 的前端分类 AI 系统"></a>基于 TensorFlow.js 的前端分类 AI 系统</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近工作中实现了一个需求：Scratch 积木编程实现分类 AI 功能，包括数据处理、神经网络训练、根据模型预测结果和可视化功能。记录一下前端基于 TensorFlow.js 的实现思路。</p>
+<h2 id="详细步骤说明"><a href="#详细步骤说明" class="headerlink" title="详细步骤说明"></a>详细步骤说明</h2><h3 id="1-数据准备阶段"><a href="#1-数据准备阶段" class="headerlink" title="1. 数据准备阶段"></a>1. 数据准备阶段</h3><pre class="mermaid">flowchart LR
+    A[原始数据] --&gt; B[数据清洗]
+    B --&gt; C[格式转换]
+    C --&gt; D[特征提取]
+    D --&gt; E[标签编码]
+
+    B1[去除缺失值] --&gt; B
+    B2[去除异常值] --&gt; B
+    B3[数据去重] --&gt; B
+
+    C1[数组格式化] --&gt; C
+    C2[数据类型转换] --&gt; C
+
+    D1[特征选择] --&gt; D
+    D2[特征缩放] --&gt; D
+    D3[特征组合] --&gt; D
+
+    E1[One-Hot编码] --&gt; E
+    E2[标签映射] --&gt; E</pre>
+
+<h3 id="2-模型构建阶段"><a href="#2-模型构建阶段" class="headerlink" title="2. 模型构建阶段"></a>2. 模型构建阶段</h3><pre class="mermaid">flowchart TD
+    A[确定问题类型] --&gt; B{分类还是回归?}
+    B --&gt;|分类| C[选择分类模型]
+    B --&gt;|回归| D[选择回归模型]
+
+    C --&gt; C1[神经网络]
+    C --&gt; C2[决策树]
+    C --&gt; C3[SVM]
+    C --&gt; C4[随机森林]
+
+    D --&gt; D1[线性回归]
+    D --&gt; D2[神经网络]
+    D --&gt; D3[决策树]
+
+    C1 --&gt; E[设计网络架构]
+    C2 --&gt; F[设置参数]
+    C3 --&gt; F
+    C4 --&gt; F
+    D1 --&gt; F
+    D2 --&gt; E
+    D3 --&gt; F
+
+    E --&gt; G[输入层设计]
+    E --&gt; H[隐藏层设计]
+    E --&gt; I[输出层设计]
+
+    G --&gt; J[编译模型]
+    H --&gt; J
+    I --&gt; J
+    F --&gt; J</pre>
+
+<h3 id="3-训练优化循环"><a href="#3-训练优化循环" class="headerlink" title="3. 训练优化循环"></a>3. 训练优化循环</h3><pre class="mermaid">flowchart TD
+    A[初始化模型] --&gt; B[设置训练参数]
+    B --&gt; C[开始训练]
+    C --&gt; D[前向传播]
+    D --&gt; E[计算损失]
+    E --&gt; F[反向传播]
+    F --&gt; G[更新权重]
+    G --&gt; H[记录指标]
+    H --&gt; I{达到停止条件?}
+    I --&gt;|否| J[下一个批次]
+    J --&gt; D
+    I --&gt;|是| K[训练完成]
+
+    B --&gt; B1[学习率]
+    B --&gt; B2[批次大小]
+    B --&gt; B3[训练轮数]
+    B --&gt; B4[优化器]
+
+    I --&gt; I1[最大轮数]
+    I --&gt; I2[早停条件]
+    I --&gt; I3[收敛判断]
+
+    style C fill:#f3e5f5
+    style K fill:#e8f5e8</pre>
+
+<h2 id="项目的具体实现流程"><a href="#项目的具体实现流程" class="headerlink" title="项目的具体实现流程"></a>项目的具体实现流程</h2><pre class="mermaid">flowchart TD
+    A[用户输入特征数据excel] --&gt; B[setTrainingFeatures<br>数据格式转换]
+    B --&gt; C[用户输入分类标签数据] --&gt; D[setTrainingLabels<br>标签处理]
+    D --&gt; E[用户配置网络结构] --&gt; F[initializeModel<br>模型初始化]
+    F --&gt; G[trainModel<br>开始训练]
+
+    G --&gt; G1[创建Sequential模型]
+    G1 --&gt; G2[添加Dense层]
+    G2 --&gt; G3[模型编译<br>Adam + CrossEntropy]
+    G3 --&gt; G4[数据张量化]
+    G4 --&gt; G5[One-Hot编码]
+    G5 --&gt; G6[model.fit训练]
+
+    G6 --&gt; G7[训练回调]
+    G7 --&gt; G8[更新可视化]
+    G8 --&gt; G9[训练完成]
+
+    G9 --&gt; H[predictWithModel<br>模型预测]
+    H --&gt; I[输出预测结果]
+
+    style G fill:#f3e5f5
+    style I fill:#e8f5e8</pre>
+
+<h2 id="系统架构设计"><a href="#系统架构设计" class="headerlink" title="系统架构设计"></a>系统架构设计</h2><h3 id="核心技术栈"><a href="#核心技术栈" class="headerlink" title="核心技术栈"></a>核心技术栈</h3><ul>
+<li><strong>TensorFlow.js</strong>: 提供深度学习能力</li>
+<li><strong>D3.js</strong>: 实现数据可视化</li>
+<li><strong>Canvas API</strong>: 渲染决策边界</li>
+</ul>
+<h3 id="系统组件架构"><a href="#系统组件架构" class="headerlink" title="系统组件架构"></a>系统组件架构</h3><pre class="line-numbers language-typescript"><code class="language-typescript">type Data <span class="token operator">=</span> <span class="token punctuation">{</span>
+  currentGenerationIndex<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 当前训练次数</span>
+  features<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 训练特征矩阵</span>
+  labels<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 训练标签</span>
+  classLabels<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 分类枚举</span>
+  tempModelMap<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 模型存储</span>
+    <span class="token punctuation">[</span>modelId<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">]</span><span class="token punctuation">:</span> tf<span class="token punctuation">.</span>Sequential<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  probabilities<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 预测概率</span>
+  classification<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 预测结果</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="核心功能实现"><a href="#核心功能实现" class="headerlink" title="核心功能实现"></a>核心功能实现</h2><h3 id="1-智能数据预处理"><a href="#1-智能数据预处理" class="headerlink" title="1. 智能数据预处理"></a>1. 智能数据预处理</h3><p>系统支持灵活的特征数据输入，自动处理列式到行式的数据转换：</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token function">setTrainingFeatures</span><span class="token punctuation">(</span>args<span class="token punctuation">:</span> BlockArgument<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> dynamicArgs <span class="token operator">=</span> getDynamicArgs<span class="token operator">&lt;</span><span class="token keyword">typeof</span> args<span class="token operator">></span><span class="token punctuation">(</span>args<span class="token punctuation">,</span> <span class="token string">'FEATURES_'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> featuresList <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span>dynamicArgs<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>_features <span class="token operator">=</span><span class="token operator">></span>
+    <span class="token keyword">Array</span><span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>_features<span class="token punctuation">)</span> <span class="token operator">?</span> _features <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">Number</span><span class="token punctuation">(</span>_features<span class="token punctuation">)</span><span class="token punctuation">]</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// 将列式存储的特征转换为行式存储 [feature1_array, feature2_array] → [[sample1_f1, sample1_f2], ...]</span>
+  <span class="token comment" spellcheck="true">// [5.1, 4.9, 5.9], [3.5, 3, 3] => [[5.1, 3.5],[4.9, 3.0],[5.9, 3.0]]</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>blockData<span class="token punctuation">.</span>features <span class="token operator">=</span> featuresList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+    featuresList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>arr <span class="token operator">=</span><span class="token operator">></span> <span class="token function">Number</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-可配置神经网络架构"><a href="#2-可配置神经网络架构" class="headerlink" title="2. 可配置神经网络架构"></a>2. 可配置神经网络架构</h3><p>系统允许用户自定义网络结构，支持多隐藏层配置：</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript">async <span class="token function">trainModel</span><span class="token punctuation">(</span>args<span class="token punctuation">:</span> <span class="token punctuation">{</span> MODEL<span class="token punctuation">:</span> <span class="token keyword">string</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> model <span class="token operator">=</span> tf<span class="token punctuation">.</span><span class="token function">sequential</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// 输入层 - 自适应特征维度</span>
+  model<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>tf<span class="token punctuation">.</span>layers<span class="token punctuation">.</span><span class="token function">dense</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    units<span class="token punctuation">:</span> features<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 神经元为特征数量的两倍</span>
+    inputShape<span class="token punctuation">:</span> <span class="token punctuation">[</span>features<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    activation<span class="token punctuation">:</span> <span class="token string">'relu'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// 隐藏层 - 用户可配置</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> hiddenSizes<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    model<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>tf<span class="token punctuation">.</span>layers<span class="token punctuation">.</span><span class="token function">dense</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      units<span class="token punctuation">:</span> hiddenSizes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>
+      activation<span class="token punctuation">:</span> <span class="token string">'relu'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 输出层 - 自适应类别数</span>
+  model<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>tf<span class="token punctuation">.</span>layers<span class="token punctuation">.</span><span class="token function">dense</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    units<span class="token punctuation">:</span> classLabels<span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+    activation<span class="token punctuation">:</span> <span class="token string">'softmax'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>关键特性：</strong></p>
+<ul>
+<li>动态网络结构：根据输入特征和输出类别自适应</li>
+<li>ReLU 激活函数：解决梯度消失问题</li>
+<li>Softmax 输出：多分类概率分布</li>
+</ul>
+<h3 id="3-高效训练流程"><a href="#3-高效训练流程" class="headerlink" title="3. 高效训练流程"></a>3. 高效训练流程</h3><p>采用现代深度学习最佳实践：</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// 模型编译</span>
+model<span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  optimizer<span class="token punctuation">:</span> tf<span class="token punctuation">.</span>train<span class="token punctuation">.</span><span class="token function">adam</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// Adam优化器</span>
+  loss<span class="token punctuation">:</span> <span class="token string">"categoricalCrossentropy"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 多分类损失函数</span>
+  metrics<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"accuracy"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 准确率监控</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// One-Hot编码</span>
+<span class="token keyword">const</span> label2Index <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">fromEntries</span><span class="token punctuation">(</span>classLabels<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">[</span>v<span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> ys <span class="token operator">=</span> tf<span class="token punctuation">.</span><span class="token function">oneHot</span><span class="token punctuation">(</span>
+  tf<span class="token punctuation">.</span><span class="token function">tensor1d</span><span class="token punctuation">(</span>
+    labels<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> label2Index<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">"int32"</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  classLabels<span class="token punctuation">.</span>length
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 训练执行</span>
+await model<span class="token punctuation">.</span><span class="token function">fit</span><span class="token punctuation">(</span>xs<span class="token punctuation">,</span> ys<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  epochs<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+  verbose<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  shuffle<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 样本随机打乱，提高收敛</span>
+  validationSplit<span class="token punctuation">:</span> <span class="token number">0.2</span><span class="token punctuation">,</span>
+  callbacks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    onEpochEnd<span class="token punctuation">:</span> <span class="token punctuation">(</span>epoch<span class="token punctuation">,</span> logs<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 实时可视化更新</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateVisualization</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> epoch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-智能预测系统"><a href="#4-智能预测系统" class="headerlink" title="4. 智能预测系统"></a>4. 智能预测系统</h3><p>结果预测</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token function">predictWithModel</span><span class="token punctuation">(</span>args<span class="token punctuation">:</span> BlockArgument<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> inputFeatures <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span>dynamicArgs<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>feature <span class="token operator">=</span><span class="token operator">></span> <span class="token function">Number</span><span class="token punctuation">(</span>feature<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> predictions <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>blockData<span class="token punctuation">.</span>tempModelMap<span class="token punctuation">[</span>args<span class="token punctuation">.</span>MODEL<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">predict</span><span class="token punctuation">(</span>
+    tf<span class="token punctuation">.</span><span class="token function">tensor2d</span><span class="token punctuation">(</span><span class="token punctuation">[</span>inputFeatures<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span> as tf<span class="token punctuation">.</span>Tensor<span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> probabilities <span class="token operator">=</span> predictions<span class="token punctuation">.</span><span class="token function">dataSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 每个结果的概率</span>
+  <span class="token keyword">const</span> maxIndex <span class="token operator">=</span> probabilities<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token operator">...</span>probabilities<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> classification <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>blockData<span class="token punctuation">.</span>classLabels<span class="token punctuation">[</span>maxIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span>blockData<span class="token punctuation">.</span>probabilities <span class="token operator">=</span> <span class="token keyword">Array</span><span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>probabilities<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>blockData<span class="token punctuation">.</span>classification <span class="token operator">=</span> classification<span class="token punctuation">;</span>
+
+  predictions<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 内存管理</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="可视化系统"><a href="#可视化系统" class="headerlink" title="可视化系统"></a>可视化系统</h2><p><img src="https://mrpaly.oss-cn-beijing.aliyuncs.com/Img/blogImg/%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83.png" alt="alt text"></p>
+<h3 id="1-训练数据散点图"><a href="#1-训练数据散点图" class="headerlink" title="1. 训练数据散点图"></a>1. 训练数据散点图</h3><p>使用 D3.js 创建交互式散点图：</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token function">drawScatterPlot</span><span class="token punctuation">(</span>options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  features<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  labels<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  classLabels<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> svg <span class="token operator">=</span> d3<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span>container<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> color <span class="token operator">=</span> d3<span class="token punctuation">.</span><span class="token function">scaleOrdinal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">domain</span><span class="token punctuation">(</span>classLabels<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">range</span><span class="token punctuation">(</span>d3<span class="token punctuation">.</span>schemeCategory10<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  svg<span class="token punctuation">.</span><span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token string">'circle'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span>features<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">{</span> x<span class="token punctuation">:</span> f<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> f<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> labels<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'circle'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'cx'</span><span class="token punctuation">,</span> d <span class="token operator">=</span><span class="token operator">></span> <span class="token function">xScale</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'cy'</span><span class="token punctuation">,</span> d <span class="token operator">=</span><span class="token operator">></span> <span class="token function">yScale</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'fill'</span><span class="token punctuation">,</span> d <span class="token operator">=</span><span class="token operator">></span> <span class="token function">color</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>label<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-实时决策边界渲染"><a href="#2-实时决策边界渲染" class="headerlink" title="2. 实时决策边界渲染"></a>2. 实时决策边界渲染</h3><p>通过 Canvas API 实现高性能决策边界可视化：</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token function">drawDecisionBoundary</span><span class="token punctuation">(</span>options<span class="token punctuation">:</span> <span class="token punctuation">{</span> model<span class="token punctuation">:</span> tf<span class="token punctuation">.</span>Sequential <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> canvas <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'canvas'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// 批量预测网格点</span>
+  <span class="token keyword">const</span> allInputs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> py <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> py <span class="token operator">&lt;</span> plotHeight<span class="token punctuation">;</span> py<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> px <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> px <span class="token operator">&lt;</span> plotWidth<span class="token punctuation">;</span> px<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> fx <span class="token operator">=</span> xScale<span class="token punctuation">.</span><span class="token function">invert</span><span class="token punctuation">(</span>px <span class="token operator">+</span> margin<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> fy <span class="token operator">=</span> yScale<span class="token punctuation">.</span><span class="token function">invert</span><span class="token punctuation">(</span>py <span class="token operator">+</span> margin<span class="token punctuation">.</span>top<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      allInputs<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>fx<span class="token punctuation">,</span> fy<span class="token punctuation">,</span> <span class="token operator">...</span>featureMeans<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 一次性推理优化性能</span>
+  <span class="token keyword">const</span> inputTensor <span class="token operator">=</span> tf<span class="token punctuation">.</span><span class="token function">tensor2d</span><span class="token punctuation">(</span>allInputs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> probsTensor <span class="token operator">=</span> model<span class="token punctuation">.</span><span class="token function">predict</span><span class="token punctuation">(</span>inputTensor<span class="token punctuation">)</span> as tf<span class="token punctuation">.</span>Tensor<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> probsArr <span class="token operator">=</span> probsTensor<span class="token punctuation">.</span><span class="token function">dataSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// 渲染像素</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderDecisionBoundaryImage</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> classIndexMatrix<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="系统优势"><a href="#系统优势" class="headerlink" title="系统优势"></a>系统优势</h2><ul>
+<li><strong>直观可视化</strong>: 实时展示训练过程和决策边界</li>
+<li><strong>模块化设计</strong>: 每个功能独立，便于理解</li>
+<li><strong>即时反馈</strong>: 训练和预测结果立即可见</li>
+<li><strong>前端 AI</strong>: 完全在浏览器中运行，无需服务器</li>
+</ul>
+<h2 id="性能优化策略"><a href="#性能优化策略" class="headerlink" title="性能优化策略"></a>性能优化策略</h2><h3 id="1-内存管理"><a href="#1-内存管理" class="headerlink" title="1. 内存管理"></a>1. 内存管理</h3><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// 及时释放张量资源</span>
+xs<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ys<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+predictions<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-批量处理"><a href="#2-批量处理" class="headerlink" title="2. 批量处理"></a>2. 批量处理</h3><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// 批量预测替代逐点预测</span>
+<span class="token keyword">const</span> inputTensor <span class="token operator">=</span> tf<span class="token punctuation">.</span><span class="token function">tensor2d</span><span class="token punctuation">(</span>allInputs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> probsTensor <span class="token operator">=</span> model<span class="token punctuation">.</span><span class="token function">predict</span><span class="token punctuation">(</span>inputTensor<span class="token punctuation">)</span> as tf<span class="token punctuation">.</span>Tensor<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-Canvas-优化"><a href="#3-Canvas-优化" class="headerlink" title="3. Canvas 优化"></a>3. Canvas 优化</h3><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token comment" spellcheck="true">// 预缓存颜色避免重复计算</span>
+<span class="token keyword">const</span> colorCache <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> c <span class="token operator">=</span> d3<span class="token punctuation">.</span><span class="token function">color</span><span class="token punctuation">(</span><span class="token function">color</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">)</span> colorCache<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>c<span class="token punctuation">.</span>r<span class="token punctuation">,</span> c<span class="token punctuation">.</span>g<span class="token punctuation">,</span> c<span class="token punctuation">.</span>b<span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">.Paly</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://mrw1108.github.io/2025/09/25/ji-yu-tensorflow.js-de-qian-duan-fen-lei-ai-xi-tong/">https://mrw1108.github.io/2025/09/25/ji-yu-tensorflow.js-de-qian-duan-fen-lei-ai-xi-tong/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">.Paly</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/AI/">
+                                    <span class="chip bg-color">AI</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/12/01/webworker-yuan-li-jie-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="WebWorker原理详解">
+                        
+                        <span class="card-title">WebWorker原理详解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            原理到实践，全面解析WebWorker的核心概念与应用场景
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-12-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/WebWorker/">
+                        <span class="chip bg-color">WebWorker</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <span class="chip bg-color">多线程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/06/19/elpis-xue-xi-xin-de/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Elpis 学习心得">
+                        
+                        <span class="card-title">Elpis 学习心得</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            基于 node + vue3 + webpack5 ，完成一个名为 elpis 的全栈开发框架。Elpis 思想：通过 80% 的抽离和重复工作支持配置化，20% 的定制化工作，减少 CRUD 体力活的比例，让程序员更专注于创造
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-06-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AE%9E%E8%B7%B5/">
+                        <span class="chip bg-color">实践</span>
+                    </a>
+                    
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
+                    </a>
+                    
+                    <a href="/tags/koa/">
+                        <span class="chip bg-color">koa</span>
+                    </a>
+                    
+                    <a href="/tags/vue3/">
+                        <span class="chip bg-color">vue3</span>
+                    </a>
+                    
+                    <a href="/tags/webpack5/">
+                        <span class="chip bg-color">webpack5</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2025</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">.Paly</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">46.1k</span>&nbsp;字
+            
+            
+            
+            
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/MrW1108" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1637011263@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1637011263" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'base',
+                themeVariables: {
+                    'primaryColor': '#f8f9fa',
+                    'primaryTextColor': '#2c3e50',
+                    'primaryBorderColor': '#34495e',
+                    'lineColor': '#7f8c8d',
+                    'tertiaryColor': '#ecf0f1',
+                    'background': '#ffffff',
+                    'fontFamily': '"Caveat", "Architects Daughter", cursive',
+                    'fontSize': '16px',
+                    'mainBkg': '#ffffff'
+                },
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>

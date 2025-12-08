@@ -1,0 +1,1208 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="毛概知识概述, 前端开发,JavaScript,Vue,React,性能优化,TensorFlow.js,软件工程,技术博客">
+    <meta name="description" content="专注前端开发的技术博客，分享JavaScript、Vue、React、性能优化、AI应用等前端技术经验与最佳实践">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>毛概知识概述 | .Paly</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title=".Paly" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">.Paly</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">.Paly</div>
+        <div class="logo-desc">
+            
+            专注前端开发的技术博客，分享JavaScript、Vue、React、性能优化、AI应用等前端技术经验与最佳实践
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/MrW1108" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/MrW1108" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">毛概知识概述</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%AF%9B%E6%A6%82/">
+                                <span class="chip bg-color">毛概</span>
+                            </a>
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%AF%9B%E6%A6%82/" class="post-category">
+                                毛概
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-01-08
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    21 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="毛概知识概述"><a href="#毛概知识概述" class="headerlink" title="毛概知识概述"></a>毛概知识概述</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>马克思主义:</strong> 是关于自然界、人类社会、人类思维发展的一般规律的理论体系</p>
+<p><strong>马克思主义中国化：</strong></p>
+<blockquote>
+<p><strong>内容</strong></p>
+<ul>
+<li>马克思主义中国化就是把马克思主义基本原理同中国具体实际和时代特征结合起来，运用马克&gt;思主义的立场、观点、方法研究和解决中国革命、建设、改革中的问题；</li>
+<li>就是总结提炼中国革命、改革建设的实践经验，从而认识和掌握客观规律，为马克思主义增添新的内容；</li>
+<li>运用中国人民喜闻乐见的民族语言来阐述马克思主义理论，使之成为具有中国特色、中国风格、中国气派的马克思主义</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>重要性：</strong> 历史和现实反复证明，马克思主义只有中国化才能在中国大地上闪耀真理光芒 ，也只有实现中国化才能救中国、发展中国、发展社会主义</p>
+</blockquote>
+<blockquote>
+<p><strong>两次飞跃</strong> （毛泽东思想和中国特色社会主义理论主义体系）</p>
+<ul>
+<li>新民主主义时期，形成毛泽东思想</li>
+<li>社会主义进入改革开放时期，形成了包括邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义理论体系。</li>
+</ul>
+</blockquote>
+<p><strong>一些重要的事件和人物</strong></p>
+<ul>
+<li>遵义会议：认识了马克思主义的重要地位</li>
+<li>延安整风（1942-1945）：马克思主义中国化思想成为全党共识</li>
+<li>党的二大：提出了党在民主革命时期的纲领</li>
+<li>党的三大：提出了建立了国共统一战线的思想（忽视领导权问题）</li>
+<li>党的四大：第一次提出无产阶级领导权和农民同盟军的思想</li>
+<li>党的十二大： 最终确定毛泽东思想</li>
+<li>党的十四大：把建设社会主义市场经济确立为经济体制改革的目标</li>
+<li>1945 陈独秀 建立新青年杂志</li>
+<li>1917 俄国十月革命成功 开辟无产阶级社会主义新时代</li>
+<li>1919 和平会议 ++五四运动的开始++，拒绝在合约上签字（工人阶级力量）<br>促进了马克思主义和社会会主义</li>
+</ul>
+<h2 id="第一章-毛泽东思想"><a href="#第一章-毛泽东思想" class="headerlink" title="第一章 毛泽东思想"></a>第一章 毛泽东思想</h2><p><strong>三大作风</strong> 理论和实践相结合的作风、和人民群众紧密结合在一起的作风、以及自我批评的作风</p>
+<p><strong>活的灵魂</strong> 实事求是、群众路线、独立自主</p>
+<p><strong>形成和发展过程</strong> 在土地革命战争时期形成，在抗日战争时期走向成熟，并在解放战争时期和新中国成立后继续发展</p>
+<p><strong>1.毛泽东思想形成和发展的社会历史条件是什么？</strong><br>（1）20 世纪前中期世界和中国政局的变动，是毛泽东思想产生和形成的时代背景。<br>（2）毛泽东思想的产生和形成，是近现代中国社会和革命运动发展的客观需要和历史产物。<br>（3）新的社会生产力的增长和工人运动的发展，为毛泽东思想的产生和形成提供了物质基础。<br>（4）新文化运动的兴起和马克思列宁主义的传人与传播，为毛泽东思想的产生和形成准备了思想理论条件。<br>（5）中国共产党领导的人民革命，是毛泽东思想产生和形成的实践基础。</p>
+<p><strong>2.如何把握毛泽东思想的主要内容和活的灵魂？</strong></p>
+<blockquote>
+<p><strong>主要内容</strong>：① 关于新民主主义革命；② 关于社会主义革命和社会主义建设；③ 关于革命军队的建设和军事战略；④ 关于政策和策略；⑤ 关于思想政治工作和文化工作；⑥ 关于党的建设。<br><strong>毛泽东思想活的灵魂</strong>：是贯穿于毛泽东思想各个组成部分的立场、观点和方法，它们有三个基本方面，即<strong><em>实事求是、群众路线、独立自主</em></strong>。其中，实事求是是毛泽东思想的精髓，群众路线是中国共产党的根本路线，独立自主是中国革命和建设的基本立足点。<br>毛泽东思想的独创性理论和活的灵魂，构成毛泽东思想的科学体系。这一体系具有科学性、独创性、完整性等特点。</p>
+</blockquote>
+<p><strong>3.毛泽东思想科学概念的涵义是什么?（历史地位？）</strong><br>是马克思主义中国化的第一个重大理论成果；是中国革命和建设的科学指南；是中国共产党和人民的宝贵精神财富；是党的指导思想。毛泽东思想是马克思列宁主义在中国的运用和发展，是被实践证明了的关于中国革命和建设的正确的理论原则和经验总结，是中国共产党集体智慧的结晶，这就是毛泽东思想的科学涵义。</p>
+<h2 id="第二章-新民主主义革命理论"><a href="#第二章-新民主主义革命理论" class="headerlink" title="第二章 新民主主义革命理论"></a>第二章 新民主主义革命理论</h2><ul>
+<li><strong>近代中国基本国情</strong> 半殖民半封建社会</li>
+<li>半殖民地化 是政治上的</li>
+<li><strong>革命基本动力</strong> 无产阶级</li>
+<li><strong>革命基本问题</strong> 农民问题</li>
+<li><strong>革命中心问题</strong> 无产阶级领导权</li>
+<li><strong>中国革命战争实质</strong> 农民战争</li>
+<li><strong>城市小资产阶级</strong> 不是剥削者，不属于资产阶级</li>
+<li><strong>民族资产阶级</strong> 中国革命动力之一。<strong>两面性：</strong> 革命性、软弱性（新民主主义革命时期）</li>
+<li><strong>一次革命论</strong> 只看到两者（新民主主义革命和社会主义革命）联系，没看到区别</li>
+<li><strong>二次革命论</strong> 只看到两者区别，没看到联系</li>
+<li><strong>新民主主义革命的总路线</strong> 1948 年提出，内容是无产阶级领导的、人民大众的，反对帝国主义、封建主义和官僚资本主义的革命</li>
+<li><strong>三大法宝</strong> 统一战线、武装斗争、党的建设</li>
+</ul>
+<p><strong>新民主主义基本纲领</strong></p>
+<blockquote>
+<p><strong>政治纲领</strong> 国体（内容）–各革命阶级联合专政，政体（形式）–民主集中制的人民代表大会制度，这就是新民主主义政治<br><strong>经济纲领</strong> 基本内容为无产阶级领导的人民大众反帝反封建文化<br><strong>文化纲领</strong></p>
+</blockquote>
+<p><strong>新民主主义革命道路的内容和意义</strong></p>
+<blockquote>
+<p><strong>内容</strong>： 走农村包围城市、武装夺取政权的道路，根本在于处理好土地革命、武装斗争、农村革命根据地建设三者之间的关系。<br><strong>三者关系：</strong> 土地革命史民主革命的基本的内容；武装斗争是主要形式，是土地革命的保证；农村革命根据地是进行武装斗争和开展土地革命的依托。实现三者密切结合和有机统一。</p>
+</blockquote>
+<h2 id="第三章-社会主义改造理论"><a href="#第三章-社会主义改造理论" class="headerlink" title="第三章 社会主义改造理论"></a>第三章 社会主义改造理论</h2><ul>
+<li><strong>新民主主义社会是一个过渡性的社会</strong> 不是独立社会形态，属于社会主义体系；经济成分：个体经济、资本主义经济、社会主义经济</li>
+<li><strong>一化三改</strong> “一化”社会主义工业化，“三改”个体农业、手工业、资本主义工商业的社会主义改造</li>
+<li><strong>四马分肥</strong> 企业的利润，按国家所得税、企业公积金、工人福利费、资方红利这四个方面进行分配</li>
+<li><strong>三大改造</strong> 农业、手工业、资本主义工商业</li>
+<li><strong>社会主义制度在中国确立</strong> 1956 年底，三大改造完成（起点）</li>
+</ul>
+<p><strong>1.怎样理解党在过渡时期的总路线？</strong><br>是以“一化三改”为核心的总路线。一是逐步实现社会主义工业化，这是总线路的主体；二是实现对农业、手工业和资本主义工商业的改造。这两方面相互联系、相互促进、相互制约，是一条社会会主义建设和社会主义改造同时并举的路线。是根据马克思列宁主义基本原理，结合我国具体实际，创造性地开辟了一条适合中国特色社会会主义改造道路，成功完成了生产资料私有制的社会主义改造，实现中国历史上最深刻最伟大的社会变革，是毛泽东思想的重要思想，积累了宝贵的历史经验。</p>
+<p><strong>2.社会主义改造</strong><br>（1）农业手工业的社会主义改造：走互助合作道路。<br>（2）资本主义工商业的社会主义改造：和平赎买；低级到高级的国家资本主义过度形式，公私合营；成为自食其力的社会主义劳动者</p>
+<h2 id="第四章-社会主义建设道路初步探索的理论成果"><a href="#第四章-社会主义建设道路初步探索的理论成果" class="headerlink" title="第四章 社会主义建设道路初步探索的理论成果"></a>第四章 社会主义建设道路初步探索的理论成果</h2><p><strong>两参一改三结合</strong> 干部参加劳动、工人参加管理，改革不合理规章制度，工人群众、领导干部、技术人员相结合<br><strong>《论十大关系》</strong> 党建设开端</p>
+<p><strong>初步探索</strong> {总结第一个五年计划过程的经验；如何<strong>借鉴</strong>苏联社会建设的经验}<br><strong>借鉴意义</strong> 经济上：高度集中的计划经济体制；政治上：高度集权党的行政体制；对外关系上：严重的官僚主义</p>
+<p><strong>三个主体三个补充</strong> （陈云提出）<br>（1）工商业经营方面：国家经济、集体经济是主体，个体经济是补充<br>（2）生产计划方面：计划生产是主体，许可范围内的自由生产是补充<br>（3）社会主义统一市场里：国家市场是主体，自由市场是补充</p>
+<p><strong>1.党在中国社会主义建设道路的初步探索中取得了哪些重要的理论成果？</strong><br>（1）调动一切积极因素为社会主义事业服务的思想<br>（2）正确认识和处理社会主义矛盾的思想<br>（3）走中国工业化道路的思想<br>（4）初步探索的其他理论成果</p>
+<p><strong>2.如何认识党对社会主义建设道路初步探索的重大意义？</strong><br>（1）巩固和发展了我国社会主义制度<br>（2）为开创中国特色社会之一提供了宝贵经验、理论准备、物质基础<br>（3）丰富了科学社会主义理论体系</p>
+<p><strong>3.党对社会主义建设道路的初步探索有哪些经验教训？</strong><br>（1）必须把马克思主义与中国实际相结合，探索符合中国特点的社会主义道路<br>（2）必须正确认识社会主义社会的主要矛盾和根本任务，集中力量发展生产力<br>（3）必须从实际出发进行社会主义建设，不能急于求成<br>（4）必须发展社会主义民主，健全社会主义法制<br>（5）必须坚持党的民主集中制度和集体领导制度，加强执政党建设<br>（6）必须坚持对外开放</p>
+<h2 id="第五章-邓小平理论"><a href="#第五章-邓小平理论" class="headerlink" title="第五章 邓小平理论"></a>第五章 邓小平理论</h2><ul>
+<li><strong>时代背景</strong> 和平和发展成为时代主题</li>
+<li><strong>1992 党的十四大</strong> 逐步形成和发展了建设<strong>有</strong>中国特色社会主义的理论</li>
+<li><strong>1997 党的十五大</strong> 正式提出“邓小平理论”</li>
+<li><strong>基本问题</strong> 什么是社会主义、怎样建设社会主义</li>
+<li><strong>贯穿思想</strong> 解放思想、实事求是的思想路线</li>
+</ul>
+<p><strong>1.如何认识邓小平理论的形成的社会历史条件？</strong><br>（1）和平和发展成为时代主题<br>（2）总结我国社会主义胜利河挫折的历史经验<br>（3）借鉴其他社会主义国家兴衰成败历史经验<br>（4）在我国改革开放和现代化建设的实践中</p>
+<p><strong>2.如何把握邓小平理论的主要内容？</strong><br>（1）解放思想，实事求是的思想<br>是党的思想路线。有力的推动和保障了改革开放的进行，体现了辩证唯物主义和历史唯物主义的世界观法论，体现了革命胆略和科学精神的统一，是邓小平理论的活的灵魂，是邓小平理论的精髓<br>（2）社会主义初级阶段理论<br>（3）党的基本路线<br>领导和团结各族人民，以经济建设为中心，坚持四项基本原则，坚持改革开放，自力更生，艰苦创业，把为我国建设成为富强、民主、文明的社会主义现代化国家和奋斗。<br>（4）社会主义根本任务的理论<br>（5）“三步走”战略<br>第一步：1981-1990 实现国民生产总值比 1980 年翻一番，解决温饱问题；<br>第二步：1991-20 世纪末再翻一番，达到小康水平；<br>第三部：到 21 世纪，再翻两番，达到中等发达国家水平，基本实现现代化。<br>（6）改革开放理论<br>背景：国内“十月大革命”使党、国家、人民损失惨重；国际上科技、技术巨大落后<br>改革对象：对原有体制进行根本性变革<br>改革有利于：发展社会主义社会的生产力增强社会主义国家的综合国力；提高人民生活水平<br>（7）社会主义市场经济理论<br>推行家庭联产承包制，加速了农村经济市场化。先农村后城市，先试点后推广。<br>（8）两手抓，两手都要硬 （抓建设、抓法制）<br>（9）“一国两制”<br>是邓小平运用辩证唯物主义和历史唯物主义、坚持实事求是，把和平共处原则用于解决国家统一，体现原则性、灵活性，是对马克思主义国家学说的创造性发展。<br>（10）中国问题的关键在于党</p>
+<p><strong>3.邓小平理论的历史地位？</strong><br>（1）是马克思列宁主义、毛泽东思想的继承和发展<br>（2）中国特色社会主义理论体系的开篇之作<br>（3）改革开放和社会主义现代化建设的科学指南</p>
+<h2 id="第六章-“三个代表”重要思想"><a href="#第六章-“三个代表”重要思想" class="headerlink" title="第六章 “三个代表”重要思想"></a>第六章 “三个代表”重要思想</h2><p><strong>三个代表的核心观点</strong><br>（1）始终代表先进生产力的发展要求<br>（2）始终代表中国薪金文化的前进方向<br>（3）始终代表中国最广大人民的根本利益</p>
+<p><strong>社会主义市场经济的重要性</strong><br>实现了改革开放新的历史性突破，打开了我国经济、政治和文化发展的崭新局面，是前无古人额伟大创举，是中国共产党人对马克思主义发展作出的历史性贡献，具有特殊的重要意义。</p>
+<h2 id="第七章-科学发展观"><a href="#第七章-科学发展观" class="headerlink" title="第七章 科学发展观"></a>第七章 科学发展观</h2><p><strong>科学发展观的科学内涵</strong><br>科学发展观，第一要义是推动经济社会发展，核心立场是以人为本，基本要求是全面协调可持续，根本方法是统筹兼顾。这是对科学发展观的集中概括。</p>
+<p><strong>科学发展观的精神实质</strong><br>解放思想、实事求是、与时俱进、求真务实</p>
+<h2 id="第八章-习近平新时代中国国特色社会主义思想及其历史地位"><a href="#第八章-习近平新时代中国国特色社会主义思想及其历史地位" class="headerlink" title="第八章 习近平新时代中国国特色社会主义思想及其历史地位"></a>第八章 习近平新时代中国国特色社会主义思想及其历史地位</h2><p><strong>1.如何理解我国社会主要矛盾发生的变化？</strong><br>（1）新中国建立之初：广大人民群众同帝国主义、封建主义、国民党残余势力之间的矛盾<br>（2）1952 土地改革完成：无产阶级和资产阶级之间的矛盾<br>（3）社会主义改造基本完成后：人民日益增长的物质文化需要同落后的社会生产之间的矛盾<br>（4）十九大：人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾</p>
+<p><strong>2.如何认识中国特色社会主义进入新时代？</strong><br>是我国发展新的历史方位。作出这个重大政治判断，是改革开放以来特别是党的十八大以来我国社会取得的历史性成就和发生的历史性变革的必然结果，是我国社会主要矛盾运动的必然结果，是党团结带领人民开创光明未来的必然要求。在中华人民共和国发展史上、中华民族发展史上具有重大意义，在世界社会主义发展史上也有重大意义。</p>
+<p><strong>3.如何把握习近平新时代中国特色社会主义思想的主要内容和历史地位？</strong><br>主要内容围绕新时代坚持和发展什么样的中国特色社会主义、怎样坚持和发展中国特色社会主义，提出了“八个明确”核心观点和“十四个坚持”进本方略。<br>是马克思主义中国化最新成果，是中国特色社会主义理论体系的重要组成部分，是当代中国马克思主义、21 世纪马克思主义，是党和国家必须长期坚持不断发展的指导思想，是全党全国人民为实现中华民族伟大复兴的行动指南。</p>
+<h2 id="第九章-坚持和发展中国特色社会主义的总任务"><a href="#第九章-坚持和发展中国特色社会主义的总任务" class="headerlink" title="第九章 坚持和发展中国特色社会主义的总任务"></a>第九章 坚持和发展中国特色社会主义的总任务</h2><p><strong>三句诗</strong><br>习近平引用三句诗，生动诠释了近代以来中国人民寻梦、追梦、圆梦的历史进程。<br>（1）中华民族的昨天，“雄关漫道真如铁”<br>（2）今天，“人间正道是沧桑”<br>（3）明天，“长风破浪会有时”</p>
+<p><strong>实现中华民族伟大复兴</strong>是近代以来中华民族最伟大的梦想<br><strong>中国梦的本质</strong> 国家富强、民族振兴、人民幸福</p>
+<p><strong>1.如何看待开启全民建设社会主义现代化强国的新征程？</strong><br>提出“三步走”战略目标：小康社会—&gt;基本实现现代化—&gt;全面建成社会主义现代化强国。这一战略安排，是在综合分析国内形势和我国发展条件之后作出的重大决策安排，是我们党适应我国发展实际作出的必然选择，对动员全党全国各族人民万众一心实现中华民族伟大复兴的中国梦具有重大意义。</p>
+<p><strong>两步走</strong>（在全面建成小康社会的基础上）<br>（1）从 2020 年到 2035 年，基本实现社会主义现代化的目标要求<br>（2）从 2035 年到本世纪中叶，建成社会主义现代化强国的目标要求</p>
+<h2 id="第十章-“五位一体”总体布局"><a href="#第十章-“五位一体”总体布局" class="headerlink" title="第十章 “五位一体”总体布局"></a>第十章 “五位一体”总体布局</h2><p><strong>健全人民当家作主的制度体系</strong>是中国特色社会主义民主政治的最重要内容<br><strong>基本政治制度</strong> 以中国共产党领导的多党合作和政治协商制度（政党制度）、民族区域自治制度、基层群众自治制度<br><strong>根本自治制度</strong> 人民代表大会制度<br><strong>三结合</strong> 坚持党的领导、人民当家作主、依法治国偶有机统一</p>
+<p>我国是<strong>工人阶级领导的、以工农联盟为基础的人民民主专政</strong>的社会主义国家</p>
+<p><strong>1.新时代如何推进现代化经济体系建设？</strong><br>（1）贯彻创新、协调、绿色、开放、共享的新发展理念。<br>（2）深化供给侧结构性改革，坚持质量第一、效益优先，以供给侧结构性改革为主线，推动经济发展质量变革、效率变革、动力变革，提高全要素生产率（总产量、全部要素投入量）。<br>推进增长动能转换，以加快发展先进制造业为重点全面提升实体经济；<br>深化要素市场化配置改革，实现由以价取胜向以质取胜的转变；<br>持续推进“三去一降一补”，优化市场供给结构。去产能、去库存、去杠杆、降成本、补短板；<br><strong>2.如何推动社会主义文化繁荣昌盛？</strong><br>（1）牢牢掌握意识形态工作领导权<br>（2）培育和践行社会主义核心价值观<br>（3）坚持文化自信，建设社会主义文化强国。提高文化软实力。</p>
+<p><strong>3.如何在发展中加强和改善民生？</strong><br>（1）提高保障和改善民生水平。优先发展教育事业；提高就业质量和人民收入水平；坚决打赢脱贫攻坚战；实施健康中国战略。<br>（2）加强和创新社会治理<br>（3）坚持总体国家安全观。系统性、全面性、持续性。</p>
+<p><strong>4.如何建设美丽中国？</strong><br>要树立人与自然和谐共生的基本理念，实现最严格的环境保护政策，坚持绿色发展，加快生态文明体制改革。<br>（1）坚持人与自然和谐共生。这是生态文明的核心。要尊重自然、顺应自然、保护自然<br>（2）形成人与自然和谐发展新格局<br>（3）加快生态文明体制改革</p>
+<h2 id="第十一章-“四个全面”战略布局"><a href="#第十一章-“四个全面”战略布局" class="headerlink" title="第十一章 “四个全面”战略布局"></a>第十一章 “四个全面”战略布局</h2><p><strong>四个全面</strong> 全面建成小康社会、全面深化改革、全面依法治国、全面从严治党<br><strong>全面依法治国总目标</strong> 建设中国特色社会主义法治体系，建设社会主义法治国家<br><strong>党的十一届三中全会</strong> 明确提出“发展社会主义民主、健全社会主义法治”的重大方针<br><strong>十六大</strong> 提出发展社会主义民主政治，最根本的是要把坚持党的领导、人民当家作主和依法治国有机统一起来<br><strong>十七大</strong> 提出依法治国是社会主义民主政治的基本要求<br><strong>十八大</strong> 提出全面依法治国</p>
+<p><strong>1.决胜全面建成小康社会提出了哪些要求？</strong><br>（1）坚决打好防范化解重大风险攻坚战<br>（2）坚决打好精准脱贫攻坚战<br>（3）坚决打好污染防治攻坚战<br>（4）确保经济社会持续健康发展</p>
+<p><strong>2.如何理解全面深化改革的总目标？</strong>（党的十八届三中全会）<br>总目标是完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化。</p>
+<h2 id="第十三中-中国特色大国外交"><a href="#第十三中-中国特色大国外交" class="headerlink" title="第十三中 中国特色大国外交"></a>第十三中 中国特色大国外交</h2><p><strong>一带一路“五通”</strong> 政策沟通、设施沟通、贸易沟通、资金融通、民心相通</p>
+<p><strong>1.如何认识当今世界的发展趋势？</strong><br>（1）世界正在处于大发展大变革大调整时期。和平和发展仍是时代主题，世界多极化、经济全球化、文化多样化、社会信息化、科学技术深入发展。各国相互联系和依存日益加深，和平发展大趋势不可逆转。同时，世界面临的不稳定性、不确定性突出。</p>
+<p><strong>2.如何推动建立以互相尊重、公平正义、合作共赢为核心的新型国际关系？</strong><br>（1）坚决维护国家核心利益<br>（2）要在和平共处五项基本原则基础上发展同世界各国的友好合作<br>（3）要积极参与全球治理体系改革和建设<br>（4）要加强涉外法律工作<br>（5）要把相互尊重、公平正义、合作共赢理念体现到政治、经济、安全、文化等对外合作的方方面面，推动构建人类命运共同体。</p>
+<p><strong>3.如何理解构建人类命运共同体思想的科学内涵？</strong><br>具有鲜明的时代背景，是一个科学完整、内涵丰富、意义深远的思想体系，其核心就是“建设持久和平、普遍安全、共同繁荣、开放包容、清洁美丽的世界”。</p>
+<p>==<strong>4.善于在危机中育先机，于变局中开新局</strong>==<br>我们要抓住机遇，应对挑战，趋利避害，奋勇前进。<br>第一，在危机中育先机，首先要看到危机并存、危中有机、危可转机，从而积极努力地去发现机遇、抓住机遇、塑造机遇。习近平总书记反复强调，危和机总是同生并存的，克服了危即是机。形势的剧烈变动往往是破旧立新、格局重塑的重要推手。当今世界正经历百年未有之大变局，对我们既有机遇也有挑战。<br>第二，于变局中开新局，就要善于准确识变、科学应变、主动求变，需要增强忧患意识，准确把握机遇和挑战的发展变化；重在防范化解重大风险，打好防范化解重大风险攻坚战；不断提高贯彻新发展理念、构建新发展格局的能力和水平。</p>
+<h2 id="第十四章-坚持和加强党的领导"><a href="#第十四章-坚持和加强党的领导" class="headerlink" title="第十四章 坚持和加强党的领导"></a>第十四章 坚持和加强党的领导</h2><p><strong>中国共产党</strong> 是中国特色社会主义最本质的特征和制度的最大优势</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">.Paly</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://mrw1108.github.io/2021/01/08/mao-gai-zhi-shi-gai-shu/">https://mrw1108.github.io/2021/01/08/mao-gai-zhi-shi-gai-shu/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">.Paly</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%AF%9B%E6%A6%82/">
+                                    <span class="chip bg-color">毛概</span>
+                                </a>
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/01/08/hexo-da-jian-ge-ren-bo-ke/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="hexo,搭建个人博客">
+                        
+                        <span class="card-title">hexo,搭建个人博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            hexo 搭建个人博客,oss,cdn,shell
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-08
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/cdn/">
+                        <span class="chip bg-color">cdn</span>
+                    </a>
+                    
+                    <a href="/tags/oss/">
+                        <span class="chip bg-color">oss</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/shell/">
+                        <span class="chip bg-color">shell</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/01/08/mao-gai-zhi-shi-gai-shu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="毛概知识概述">
+                        
+                        <span class="card-title">毛概知识概述</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            毛概各章节知识点、思考题总结，快看过来
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%AF%9B%E6%A6%82/" class="post-category">
+                                    毛概
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%AF%9B%E6%A6%82/">
+                        <span class="chip bg-color">毛概</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2025</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">.Paly</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">46.1k</span>&nbsp;字
+            
+            
+            
+            
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/MrW1108" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1637011263@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1637011263" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'base',
+                themeVariables: {
+                    'primaryColor': '#f8f9fa',
+                    'primaryTextColor': '#2c3e50',
+                    'primaryBorderColor': '#34495e',
+                    'lineColor': '#7f8c8d',
+                    'tertiaryColor': '#ecf0f1',
+                    'background': '#ffffff',
+                    'fontFamily': '"Caveat", "Architects Daughter", cursive',
+                    'fontSize': '16px',
+                    'mainBkg': '#ffffff'
+                },
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>

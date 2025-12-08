@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>.Paly</title>
+  
+  <subtitle>paly</subtitle>
+  <link href="https://mrw1108.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://mrw1108.github.io/"/>
+  <updated>2025-11-30T16:00:00.000Z</updated>
+  <id>https://mrw1108.github.io/</id>
+  
+  <author>
+    <name>.Paly</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Comlink原理解析</title>
+    <link href="https://mrw1108.github.io/2025/12/01/comlink-yuan-li-jie-xi/"/>
+    <id>https://mrw1108.github.io/2025/12/01/comlink-yuan-li-jie-xi/</id>
+    <published>2025-11-30T16:00:00.000Z</published>
+    <updated>2025-11-30T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Comlink-的核心目标：让-Worker-通信像调用本地函数一样&quot;&gt;&lt;a href=&quot;#Comlink-的核心目标：让-Worker-通信像调用本地函数一样&quot; class=&quot;headerlink&quot; title=&quot;Comlink 的核心目标：让 Worker</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="WebWorker" scheme="https://mrw1108.github.io/tags/WebWorker/"/>
+    
+    <category term="多线程" scheme="https://mrw1108.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebWorker原理详解</title>
+    <link href="https://mrw1108.github.io/2025/12/01/webworker-yuan-li-jie-xi/"/>
+    <id>https://mrw1108.github.io/2025/12/01/webworker-yuan-li-jie-xi/</id>
+    <published>2025-11-30T16:00:00.000Z</published>
+    <updated>2025-11-30T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;WebWorker 作为浏览器提供的多线程解决方案，为前端开发者带来了突破JavaScript单线程限制的能力。本文将从原理到实践，全面解析WebWorker的核心概念与应用场景。&lt;/p&gt;
+&lt;h2 id=&quot;1-到底什么是WebWorker&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="WebWorker" scheme="https://mrw1108.github.io/tags/WebWorker/"/>
+    
+    <category term="多线程" scheme="https://mrw1108.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于 TensorFlow.js 的前端分类AI系统</title>
+    <link href="https://mrw1108.github.io/2025/09/25/ji-yu-tensorflow.js-de-qian-duan-fen-lei-ai-xi-tong/"/>
+    <id>https://mrw1108.github.io/2025/09/25/ji-yu-tensorflow.js-de-qian-duan-fen-lei-ai-xi-tong/</id>
+    <published>2025-09-24T16:00:00.000Z</published>
+    <updated>2025-09-24T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;基于-TensorFlow-js-的前端分类-AI-系统&quot;&gt;&lt;a href=&quot;#基于-TensorFlow-js-的前端分类-AI-系统&quot; class=&quot;headerlink&quot; title=&quot;基于 TensorFlow.js 的前端分类 AI</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="AI" scheme="https://mrw1108.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Elpis 学习心得</title>
+    <link href="https://mrw1108.github.io/2025/06/19/elpis-xue-xi-xin-de/"/>
+    <id>https://mrw1108.github.io/2025/06/19/elpis-xue-xi-xin-de/</id>
+    <published>2025-06-18T16:00:00.000Z</published>
+    <updated>2025-06-18T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Elpis-学习心得&quot;&gt;&lt;a href=&quot;#Elpis-学习心得&quot; class=&quot;headerlink&quot; title=&quot;Elpis 学习心得&quot;&gt;&lt;/a&gt;Elpis 学习心得&lt;/h1&gt;&lt;h2 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="实践" scheme="https://mrw1108.github.io/tags/%E5%AE%9E%E8%B7%B5/"/>
+    
+    <category term="node" scheme="https://mrw1108.github.io/tags/node/"/>
+    
+    <category term="koa" scheme="https://mrw1108.github.io/tags/koa/"/>
+    
+    <category term="vue3" scheme="https://mrw1108.github.io/tags/vue3/"/>
+    
+    <category term="webpack5" scheme="https://mrw1108.github.io/tags/webpack5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ABT在前端基建中的实践</title>
+    <link href="https://mrw1108.github.io/2024/06/24/abt-zai-qian-duan-ji-jian-zhong-de-shi-jian/"/>
+    <id>https://mrw1108.github.io/2024/06/24/abt-zai-qian-duan-ji-jian-zhong-de-shi-jian/</id>
+    <published>2024-06-23T16:00:00.000Z</published>
+    <updated>2024-06-23T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ABT在前端基建中的实践&quot;&gt;&lt;a href=&quot;#ABT在前端基建中的实践&quot; class=&quot;headerlink&quot; title=&quot;ABT在前端基建中的实践&quot;&gt;&lt;/a&gt;ABT在前端基建中的实践&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="ABT" scheme="https://mrw1108.github.io/tags/ABT/"/>
+    
+    <category term="架构" scheme="https://mrw1108.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大文件上传</title>
+    <link href="https://mrw1108.github.io/2024/06/24/da-wen-jian-shang-chuan/"/>
+    <id>https://mrw1108.github.io/2024/06/24/da-wen-jian-shang-chuan/</id>
+    <published>2024-06-23T16:00:00.000Z</published>
+    <updated>2024-06-23T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;大文件上传&quot;&gt;&lt;a href=&quot;#大文件上传&quot; class=&quot;headerlink&quot; title=&quot;大文件上传&quot;&gt;&lt;/a&gt;大文件上传&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="实践" scheme="https://mrw1108.github.io/tags/%E5%AE%9E%E8%B7%B5/"/>
+    
+    <category term="文件上传" scheme="https://mrw1108.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+    <category term="策略模式" scheme="https://mrw1108.github.io/tags/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="模板模式" scheme="https://mrw1108.github.io/tags/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>请求库的封装</title>
+    <link href="https://mrw1108.github.io/2024/06/24/qing-qiu-ku-de-feng-zhuang/"/>
+    <id>https://mrw1108.github.io/2024/06/24/qing-qiu-ku-de-feng-zhuang/</id>
+    <published>2024-06-23T16:00:00.000Z</published>
+    <updated>2024-06-23T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;请求库的封装&quot;&gt;&lt;a href=&quot;#请求库的封装&quot; class=&quot;headerlink&quot; title=&quot;请求库的封装&quot;&gt;&lt;/a&gt;请求库的封装&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="网络" scheme="https://mrw1108.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="请求库封装" scheme="https://mrw1108.github.io/tags/%E8%AF%B7%E6%B1%82%E5%BA%93%E5%B0%81%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>针对特定问题的首屏优化</title>
+    <link href="https://mrw1108.github.io/2024/06/24/shou-ping-you-hua/"/>
+    <id>https://mrw1108.github.io/2024/06/24/shou-ping-you-hua/</id>
+    <published>2024-06-23T16:00:00.000Z</published>
+    <updated>2024-06-23T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;首屏优化&quot;&gt;&lt;a href=&quot;#首屏优化&quot; class=&quot;headerlink&quot; title=&quot;首屏优化&quot;&gt;&lt;/a&gt;首屏优化&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="架构" scheme="https://mrw1108.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="性能优化" scheme="https://mrw1108.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器渲染原理</title>
+    <link href="https://mrw1108.github.io/2023/06/20/liu-lan-qi-xuan-ran-yuan-li/"/>
+    <id>https://mrw1108.github.io/2023/06/20/liu-lan-qi-xuan-ran-yuan-li/</id>
+    <published>2023-06-19T16:00:00.000Z</published>
+    <updated>2023-06-19T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;什么是渲染&quot;&gt;&lt;a href=&quot;#什么是渲染&quot; class=&quot;headerlink&quot; title=&quot;什么是渲染&quot;&gt;&lt;/a&gt;什么是渲染&lt;/h3&gt;&lt;p&gt;html 经过一系列复杂运算得到像素点信息&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="浏览器" scheme="https://mrw1108.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS继承</title>
+    <link href="https://mrw1108.github.io/2023/05/18/js-ji-cheng/"/>
+    <id>https://mrw1108.github.io/2023/05/18/js-ji-cheng/</id>
+    <published>2023-05-17T16:00:00.000Z</published>
+    <updated>2023-05-17T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;继承与原型链&quot;&gt;&lt;a href=&quot;#继承与原型链&quot; class=&quot;headerlink&quot; title=&quot;继承与原型链&quot;&gt;&lt;/a&gt;继承与原型链&lt;/h1&gt;&lt;p&gt;对于使用过基于类的语言 (如 Java 或 C++) 的开发者们来说，JavaScript</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="继承" scheme="https://mrw1108.github.io/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS API原理及实现</title>
+    <link href="https://mrw1108.github.io/2023/05/18/yi-xie-api-yuan-li-ji-shi-xian/"/>
+    <id>https://mrw1108.github.io/2023/05/18/yi-xie-api-yuan-li-ji-shi-xian/</id>
+    <published>2023-05-17T16:00:00.000Z</published>
+    <updated>2023-05-17T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;x20-API&quot;&gt;&lt;a href=&quot;#x20-API&quot; class=&quot;headerlink&quot; title=&quot; API&quot;&gt;&lt;/a&gt; API&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#-api&quot;&gt; API&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="API" scheme="https://mrw1108.github.io/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原型 &amp; 原型链</title>
+    <link href="https://mrw1108.github.io/2021/05/28/yuan-xing-yuan-xing-lian/"/>
+    <id>https://mrw1108.github.io/2021/05/28/yuan-xing-yuan-xing-lian/</id>
+    <published>2021-05-27T16:00:00.000Z</published>
+    <updated>2021-05-27T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;原型&quot;&gt;&lt;a href=&quot;#原型&quot; class=&quot;headerlink&quot; title=&quot;原型&quot;&gt;&lt;/a&gt;原型&lt;/h2&gt;&lt;p&gt;要先建立构造函数，构造函数的 prototype 属性会自动指向原型对象。&lt;br&gt;在创建实例后，可以修改 prototype</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://mrw1108.github.io/tags/JavaScript/"/>
+    
+    <category term="原型" scheme="https://mrw1108.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+    <category term="原型链" scheme="https://mrw1108.github.io/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器缓存 &amp; 本地存储</title>
+    <link href="https://mrw1108.github.io/2021/05/27/liu-lan-qi-huan-cun-ben-di-cun-chu/"/>
+    <id>https://mrw1108.github.io/2021/05/27/liu-lan-qi-huan-cun-ben-di-cun-chu/</id>
+    <published>2021-05-26T16:00:00.000Z</published>
+    <updated>2021-05-26T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;code&gt;缓存&lt;/code&gt;可以说是&lt;code&gt;性能优化&lt;/code&gt;中最简单高效的一种方式,可以减低网络延迟，减小带宽等。&lt;br&gt;对于一个数据请求来说，可以分为网络请求、后端处理、浏览器响应三步，而缓存可以优化第一步和第三步，比如直接使用缓存不需要再发送请求，或者发了请</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="浏览器缓存" scheme="https://mrw1108.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
+    
+    <category term="cookie" scheme="https://mrw1108.github.io/tags/cookie/"/>
+    
+    <category term="webStorage" scheme="https://mrw1108.github.io/tags/webStorage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法</title>
+    <link href="https://mrw1108.github.io/2021/05/25/pai-xu-suan-fa/"/>
+    <id>https://mrw1108.github.io/2021/05/25/pai-xu-suan-fa/</id>
+    <published>2021-05-24T16:00:00.000Z</published>
+    <updated>2021-05-24T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;排序算法&quot;&gt;&lt;a href=&quot;#排序算法&quot; class=&quot;headerlink&quot; title=&quot;排序算法&quot;&gt;&lt;/a&gt;排序算法&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;目录&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://mrw1108.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://mrw1108.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="排序" scheme="https://mrw1108.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="快排" scheme="https://mrw1108.github.io/tags/%E5%BF%AB%E6%8E%92/"/>
+    
+    <category term="动态规划" scheme="https://mrw1108.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件测试知识概述</title>
+    <link href="https://mrw1108.github.io/2021/02/15/ruan-jian-ce-shi-zhi-shi-gai-shu/"/>
+    <id>https://mrw1108.github.io/2021/02/15/ruan-jian-ce-shi-zhi-shi-gai-shu/</id>
+    <published>2021-02-14T16:00:00.000Z</published>
+    <updated>2021-02-14T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;软件测试知识概述&quot;&gt;&lt;a href=&quot;#软件测试知识概述&quot; class=&quot;headerlink&quot; title=&quot;软件测试知识概述&quot;&gt;&lt;/a&gt;软件测试知识概述&lt;/h1&gt;&lt;h3 id=&quot;软件测试&quot;&gt;&lt;a href=&quot;#软件测试&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://mrw1108.github.io/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="软件测试" scheme="https://mrw1108.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm,看这篇就够了</title>
+    <link href="https://mrw1108.github.io/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/"/>
+    <id>https://mrw1108.github.io/2021/01/08/npm-kan-zhe-pian-jiu-gou-liao/</id>
+    <published>2021-01-08T13:12:27.000Z</published>
+    <updated>2021-01-08T13:12:27.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近在研究 &lt;code&gt;npm&lt;/code&gt; 组件发布，碰到一些相关问题，算是整理一下。&lt;/p&gt;
+&lt;h3 id=&quot;涉及内容&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="npm" scheme="https://mrw1108.github.io/categories/npm/"/>
+    
+    
+    <category term="前端" scheme="https://mrw1108.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo,搭建个人博客</title>
+    <link href="https://mrw1108.github.io/2021/01/08/hexo-da-jian-ge-ren-bo-ke/"/>
+    <id>https://mrw1108.github.io/2021/01/08/hexo-da-jian-ge-ren-bo-ke/</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-07T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;使用 hexo 和腾讯云搭建的个人博客&lt;br&gt; hexo 选用了开源主题</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="https://mrw1108.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://mrw1108.github.io/tags/hexo/"/>
+    
+    <category term="cdn" scheme="https://mrw1108.github.io/tags/cdn/"/>
+    
+    <category term="oss" scheme="https://mrw1108.github.io/tags/oss/"/>
+    
+    <category term="git" scheme="https://mrw1108.github.io/tags/git/"/>
+    
+    <category term="shell" scheme="https://mrw1108.github.io/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>毛概知识概述</title>
+    <link href="https://mrw1108.github.io/2021/01/08/mao-gai-zhi-shi-gai-shu/"/>
+    <id>https://mrw1108.github.io/2021/01/08/mao-gai-zhi-shi-gai-shu/</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-07T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;毛概知识概述&quot;&gt;&lt;a href=&quot;#毛概知识概述&quot; class=&quot;headerlink&quot; title=&quot;毛概知识概述&quot;&gt;&lt;/a&gt;毛概知识概述&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="毛概" scheme="https://mrw1108.github.io/categories/%E6%AF%9B%E6%A6%82/"/>
+    
+    
+    <category term="毛概" scheme="https://mrw1108.github.io/tags/%E6%AF%9B%E6%A6%82/"/>
+    
+    <category term="Markdown" scheme="https://mrw1108.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+</feed>
